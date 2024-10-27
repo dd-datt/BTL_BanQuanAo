@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+
+# Thư mục log
+logs/
+*.log
+
+# Thư mục cache
+cache/
+tmp/
+temp/
+
+# Thư mục vendor (nếu sử dụng Composer)
+vendor/
+
+# Thư mục chứa file cấu hình và thông tin nhạy cảm
+.env
+*.env
+
+# Thư mục của IDE và các công cụ phát triển
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vscode/
+*.code-workspace
+
+# File backup
+*.bak
+*.tmp
+*.swp
+
+# File xây dựng
+/public/css/*.css
+/public/js/*.js
+/public/images/*.png
+/public/images/*.jpg
+/public/images/*.gif
+
+# Thư mục hệ thống
+Thumbs.db
+ehthumbs.db
