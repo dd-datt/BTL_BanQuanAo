@@ -7,7 +7,7 @@
             <div class="col-lg-4 col-md-6 col-sm-7">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="./index.html"><img src="upload/logo.jpg" alt=""></a>
+                        <a href="./index.php"><img src="upload/logo.jpg" alt=""></a>
                     </div>
                     <p>Chào mừng bạn đến với TAILOR SHOP nơi cung cấp quần áo chất lượng</p>
 
@@ -18,8 +18,8 @@
                     <h6>ĐƯỜNG DẪN</h6>
                     <ul>
                         <li><a href="#">Về chúng tôi</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.php?url=lien-he">Liên hệ</a></li>
+                        <li><a href="index.php?url=doi-tra">Chính sách đổi trả</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,8 +27,8 @@
                 <div class="footer__widget">
                     <h6>tÀI khoẢN</h6>
                     <ul>
-                        <li><a href="#">Tài khoản của tôi</a></li>
-                        <li><a href="#">Theo dõi đơn hàng</a></li>
+                        <li><a href="index.php?url=thong-tin-tai-khoan">Tài khoản của tôi</a></li>
+                        <li><a href="index.php?url=don-hang">Theo dõi đơn hàng</a></li>
                         <li><a href="#">Thủ tục thanh toán</a></li>
 
                     </ul>
