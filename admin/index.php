@@ -65,6 +65,9 @@
 
                 require_once "don-hang/edit.php";         
                 break;
+            case 'in-hoa-don':
+                require_once "don-hang/hoadon.php";
+                break;     
             // Bài viết
             case 'danh-sach-bai-viet':
 
