@@ -73,7 +73,7 @@
                                 <ul class="dropdown">
                                     <li><a href="index.php?url=gio-hang">Giỏ hàng</a></li>
                                     <li><a href="index.php?url=thanh-toan">Thanh toán</a></li>
-                                    <li><a href="index.php?url=don-hang">Đơn mua</a></li>
+                                    <li><a href="index.php?url=don-hang">Đơn hàng</a></li>
                                 </ul>
                             </li>
 
