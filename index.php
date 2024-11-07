@@ -41,7 +41,7 @@ if (!isset($_GET['url'])) {
             require_once "views/contact.php";
             break;
         case 'gio-hang':
-            require_once "views/cart.php";
+            require_once "views/giohang.php";
             break;
         case 'thanh-toan':
             require_once "views/checkout.php";

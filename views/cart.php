@@ -191,21 +191,6 @@
                     <!-- </form> -->
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="cart__btn">
-                        <a href="index.php?url=cua-hang">Tiếp tục mua sắm</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="cart__btn update__btn">
-                        <!-- <a href="#"><span class="icon_loading"></span>Cập nhật giỏ hàng</a> -->
-
-                        <button name="update_cart" type="submit"><span class="icon_loading"></span>Cập nhật giỏ
-                            hàng</button>
-                    </div>
-                </div>
-            </div>
         </form>
         <div class="row">
             <div class="col-lg-6">
