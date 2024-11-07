@@ -54,10 +54,10 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
 <!-- Banner Section End -->
 
 
-<!-- Product Section Begin -->
+<!-- Sản phẩm Begin -->
 <section class="product spad" style="background-color: #F4F4F9;">
 
-    <!-- CATER -->
+    <!-- Danh mục sp -->
     <section class="container cate-home" style="background-color: #ffffff; border-radius: 10px;">
 
         <div class="section-title pt-2" style="margin-bottom: 30px;">
@@ -83,9 +83,9 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
 
         </div>
     </section>
-    <!-- CATE END-->
+    <!-- Danh mục sp END-->
 
-
+    <!-- Sản phẩm START -->
     <div class="container" style="background-color: #ffffff; border-radius: 10px;">
 
         <div class="row pt-3">
@@ -105,10 +105,20 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sach-1">
                     <div class="product__item sale">
                         <div class="product__item__pic set-bg" data-setbg="upload/<?= $image ?>">
+
                             <!-- <div class="label sale">Sale</div> -->
+
                             <div class="label_right sale">-<?= $discount_percentage ?></div>
                             <ul class="product__hover">
-                                <li><a href="upload/<?= $image ?>" class="image-popup"><span class="arrow_expand"></span></a></li>
+
+                                <!-- Icon mở rộng [BỎ]  -->  
+                                <!-- <li>
+                                    <a
+                                        href="upload/<?= $image ?>" class="image-popup"> <span class="arrow_expand"></span>
+                                    </a>
+                                </li> -->
+
+                                <!-- Icon search -->
                                 <li>
                                     <a href="index.php?url=chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>">
                                         <span class="icon_search_alt"></span>
@@ -150,7 +160,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price"><?= number_format($sale_price) . "₫" ?> <span><?= number_format($price) . "đ" ?></span></div>
+                            <div class="product__price" id="product__price"><?= number_format($sale_price) . "₫" ?> <span><?= number_format($price) . "đ" ?></span></div>
                         </div>
                     </div>
                 </div>
