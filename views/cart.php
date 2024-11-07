@@ -197,7 +197,7 @@
                         <li>Tổng <span><?=number_format($totalPayment)?>đ</span></li>
                     </ul>
                     <a href="index.php?url=thanh-toan" class="primary-btn">THANH TOÁN</a>
-                    <!-- <a href="thanh-toan-momo" class="btn-momo primary-btn mt-3">THANH TOÁN MOMO</a> -->
+                   
                 </div>
             </div>
         </div>

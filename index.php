@@ -16,6 +16,7 @@ require_once "models/AddressModel.php";
 define('BASE_URL', 'index.php?url=');
 define('URL_ORDER', 'http://localhost/BTL_BanQuanAo/don-hang');
 
+// Các thành phần có thể sử dụng lại
 require_once "components/head.php";
 require_once "components/header.php";
 
@@ -24,24 +25,30 @@ if (!isset($_GET['url'])) {
     require_once "views/home.php";
 } else {
     switch ($_GET['url']) {
+            // Trang chủ
         case 'trang-chu':
             require_once "views/home.php";
             break;
         case 'cua-hang':
             require_once "views/shop.php";
             break;
+            // Chi tiết sản phẩm
         case 'chitietsanpham':
             require_once "views/productdetail.php";
             break;
+            // Danh mục sản phẩm
         case 'danh-muc-san-pham':
             require_once "views/shop-by-category.php";
             break;
+            // Liên hệ
         case 'lien-he':
             require_once "views/contact.php";
             break;
+            // Giỏ hàng
         case 'gio-hang':
             require_once "views/giohang.php";
             break;
+            // Thanh toán
         case 'thanh-toan':
             require_once "views/checkout.php";
             break;
@@ -59,6 +66,7 @@ if (!isset($_GET['url'])) {
         case 'cam-on':
             require_once "views/thanks.php";
             break;
+            // Đơn hàng
         case 'don-hang':
             require_once "views/my-order.php";
             break;
@@ -95,7 +103,7 @@ if (!isset($_GET['url'])) {
         case 'khoi-phuc-mat-khau':
             require_once "views/user/password-recovery.php";
             break;
-
+            // Đổi trả
         case 'doi-tra':
             require_once "view/doi-tra.php";
             break;
@@ -105,7 +113,7 @@ if (!isset($_GET['url'])) {
         case 'tim-kiem':
             require_once "views/search.php";
             break;
-
+            // Không tìm thấy/Chưa tạo trang đó
         default:
             require_once "views/not-page.php";
             break;
