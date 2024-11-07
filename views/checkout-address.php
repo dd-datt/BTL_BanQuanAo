@@ -96,7 +96,7 @@ try {
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__links">
-                    <a href="index.php"><i class="fa fa-home"></i> Trang chủ</a>
+                    <a href="gio-hang"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
                     <span>Thanh toán</span>
                 </div>
             </div>
@@ -108,12 +108,7 @@ try {
 <!-- Checkout Section Begin -->
 <section class="checkout spad">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h6 class="coupon__link"><span class="icon_tag_alt mr-1"></span>Tiến hành thanh toán đơn hàng <a
-                        class="text-primary" href="gio-hang">Trở lại giỏ hàng</a> </h6>
-            </div>
-        </div>
+
         <form action="" method="post" class="checkout__form">
             <?php
                     if($success != '') {
@@ -160,15 +155,7 @@ try {
                                 <input type="text" value="<?=$temp['note']?>" name="note">
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <p style="color: #000000; font-weight:500; font-size: 15px;">Bạn có thể nhập nhập địa chỉ
-                                khác, hoặc sử dụng địa chỉ mặc định</p>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="cart__btn">
-                                <a href="thanh-toan">Sử dụng địa chỉ mặc định</a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -263,8 +250,6 @@ try {
             <div class="row rounded justify-content-center mx-0 pt-5">
                 <div class="col-md-6 text-center">
                     <h4 class="mb-4">Vui lòng đăng nhập để có thể thanh toán</h4>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="index.php?url=dang-nhap">Đăng nhập</a>
-                    <a class="btn btn-secondary rounded-pill py-3 px-5" href="index.php">Trang chủ</a>
                 </div>
             </div>
         </div>
@@ -275,7 +260,12 @@ try {
 
 <style>
 .cart__btn a:hover {
-    background-color: #0A68FF;
+    background-color: #00704A;
+    color: #fff;
+    transition: 0.2s;
+}
+.cart_box a:hover {
+    background-color: #00704A;
     color: #fff;
     transition: 0.2s;
 }
@@ -285,12 +275,16 @@ try {
 }
 
 .checkout__form .checkout__form__input input:focus {
-    border: 1px solid #999999;
+    border: 1px solid #00704A;
 }
 
 .error {
     display: inline-block;
     height: 20px;
     font-size: 15px;
+}
+.site-btn {
+    background-color: #00704A;
+    color: #fff;
 }
 </style>
