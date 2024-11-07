@@ -3632,7 +3632,7 @@ input::-webkit-inner-spin-button {
 .input-next-cart {
   height: 50px;
   width: 130px;
-  border: 1px solid #ebebeb;
+  border: 2px solid #ebebeb;
   border-radius: 50px;
   overflow: hidden;
 }
