@@ -69,12 +69,11 @@
 
                             <li><a href="index.php?url=lien-he">LIÊN HỆ</a></li>
 
-                            <li><a href="#">Trang</a>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a>
                                 <ul class="dropdown">
-
                                     <li><a href="index.php?url=gio-hang">Giỏ hàng</a></li>
                                     <li><a href="index.php?url=thanh-toan">Thanh toán</a></li>
-                                    <li><a href="index.php?url=don-hang">Đơn mua</a></li>
+                                    <li><a href="index.php?url=don-hang">Đơn hàng</a></li>
                                 </ul>
                             </li>
 
@@ -109,18 +108,12 @@
                             <ul class="header__right__widget">
                                 <li><span class="icon_search search-switch"></span></li>
 
-                                <li><a id="cart-mini" href="#"><span class="icon_bag_alt"></span>
-                                        <div class="tip"><?= $count_carts ?></div>
-                                    </a></li>
                             </ul>
                         <?php } else { ?>
 
                             <ul class="header__right__widget">
                                 <li><span class="icon_search search-switch"></span></li>
 
-                                <li><a onclick="alert('Vui lòng đăng nhập để sử dụng chức năng')" id="cart-mini" href="dang-nhap"><span class="icon_bag_alt"></span>
-                                        <div class="tip">0</div>
-                                    </a></li>
                             </ul>
                         <?php } ?>
                     </div>

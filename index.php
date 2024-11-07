@@ -120,9 +120,6 @@ if (!isset($_GET['url'])) {
             break;
     }
 }
-
-require_once "components/minicart.php";
-
 require_once "components/footer.php";
 
 
