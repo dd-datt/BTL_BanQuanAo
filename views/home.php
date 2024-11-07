@@ -9,22 +9,16 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
 
 <!-- Banner Section Begin -->
 <section class="container my-3">
-    <div class="row">
-        <div class="col-lg-8 col-sm-12">
-            <div id="header-carousel" class="carousel slide" data-ride="carousel">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-sm-12 d-flex justify-content-center">
+            <div id="header-carousel" class="carousel slide" data-ride="carousel" style="width: 100%; max-width: 1000px;">
                 <div class="carousel-inner" style="border-radius: 10px;">
                     <div class="carousel-item active">
                         <img class="img-fluid" src="upload/banner_quanao_main4.png" alt="Image">
-
                     </div>
                     <div class="carousel-item">
                         <img class="img-fluid" src="upload/banner_quanao_main5.png" alt="Image">
-
                     </div>
-                    <!-- <div class="carousel-item">
-                        <img class="img-fluid" src="upload/banner_quanao_main6.png" alt="Image">
-
-                    </div> -->
                 </div>
                 <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
                     <div class="btn btn-dark" style="width: 45px; height: 45px;">
@@ -36,17 +30,6 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                         <span class="carousel-control-next-icon mb-n2"></span>
                     </div>
                 </a>
-
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="product-offer">
-                <img class="img-fluid" src="upload/banner_quanao_main4.png" alt="">
-
-            </div>
-            <div class="product-offer">
-                <img class="img-fluid" src="upload/banner_quanao_main5.png" alt="">
-
             </div>
         </div>
     </div>
@@ -111,7 +94,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                             <div class="label_right sale">-<?= $discount_percentage ?></div>
                             <ul class="product__hover">
 
-                                <!-- Icon mở rộng [BỎ]  -->  
+                                <!-- Icon mở rộng [BỎ]  -->
                                 <!-- <li>
                                     <a
                                         href="upload/<?= $image ?>" class="image-popup"> <span class="arrow_expand"></span>
@@ -138,7 +121,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                                             <input value="<?= $image ?>" type="hidden" name="image">
 
                                             <button type="submit" name="add_to_cart" id="toastr-success-top-right">
-                                                <a href="#"><span class="icon_bag_alt"></span></a>
+                                                <a href="#"><span class="fas fa-shopping-cart"></span></a>
                                             </button>
                                         </form>
                                     <?php } else { ?>
@@ -153,13 +136,15 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                         </div>
                         <div class="product__item__text">
                             <h6 class="text-truncate-1"><a href=""><?= $name ?></a></h6>
-                            <div class="rating">
+
+                            <!-- Số sao -->
+                            <!-- <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
-                            </div>
+                            </div> -->
                             <div class="product__price" id="product__price"><?= number_format($sale_price) . "₫" ?> <span><?= number_format($price) . "đ" ?></span></div>
                         </div>
                     </div>
