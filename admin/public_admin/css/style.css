@@ -1,7 +1,7 @@
  /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 :root {
-    /* --primary: #009CFF; */
-    --primary:  #007dcc;
+    --primary: #00704a; 
+    --primary:  #338c6e;
    
     --light: #F3F6F9;
     --dark: #191C24;
@@ -427,4 +427,3 @@ p {
 .td-name {
     min-width: 150px;
 }
-
