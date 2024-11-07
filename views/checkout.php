@@ -62,7 +62,7 @@ try {
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__links">
-                    <a href="index.php"><i class="fa fa-home"></i> Trang chủ</a>
+                <a href="gio-hang"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
                     <span>Thanh toán</span>
                 </div>
             </div>
@@ -71,15 +71,11 @@ try {
 </div>
 <!-- Breadcrumb End -->
 
+
 <!-- Checkout Section Begin -->
 <section class="checkout spad">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h6 class="coupon__link"><span class="icon_tag_alt mr-1"></span>Tiến hành thanh toán đơn hàng <a
-                        class="text-primary" href="gio-hang">Trở lại giỏ hàng</a> </h6>
-            </div>
-        </div>
+
         <form action="" method="post" class="checkout__form">
             <?php
                     if($success != '') {
@@ -125,21 +121,12 @@ try {
                                 <input type="text" name="note">
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <p style="color: #000000; font-weight:500; font-size: 15px;">Bạn có thể sử dụng địa chỉ mặc
-                                định khi đăng ký, hoặc nhập nhập địa chỉ khác</p>
-                        </div>
-                        <div class="col-lg-3">
+                       
+                        <div class="col-lg-3"> 
                             <div class="cart__btn">
-                                <a href="index.php?url=thanh-toan-2">Địa chỉ mới</a>
+                                <a href="index.php?url=thanh-toan-2">Sửa</a>
                             </div>
 
-                        </div>
-
-                        <div class="col-4">
-                            <div class="cart__btn">
-                                <a href="index.php?url=thanh-toan-dia-chi2">Sủ dụng địa chỉ 2</a>
-                            </div>
                         </div>
 
 
@@ -190,13 +177,13 @@ try {
                                 <li>Tổng <span><?=number_format($totalPayment)?>đ</span></li>
                             </ul>
                         </div>
-                        <!-- <div class="checkout__order__widget">
+                         <!-- <div class="checkout__order__widget">
                                 <label for="paypal">
                                     Thanh toán khi nhận hàng
                                     <input type="checkbox" id="paypal">
                                     <span class="checkmark"></span>
                                 </label>
-                            </div> -->
+                            </div>  -->
                         <?php if($count_cart > 0) {?>
                         <div class="checkout__order__widget text-center text-dark mb-2">
                             Thanh toán khi nhận hàng
@@ -245,8 +232,6 @@ try {
             <div class="row rounded justify-content-center mx-0 pt-5">
                 <div class="col-md-6 text-center">
                     <h4 class="mb-4">Vui lòng đăng nhập để có thể thanh toán</h4>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="index.php?url=dang-nhap">Đăng nhập</a>
-                    <a class="btn btn-secondary rounded-pill py-3 px-5" href="index.php">Trang chủ</a>
                 </div>
             </div>
         </div>
@@ -257,7 +242,7 @@ try {
 
 <style>
 .cart__btn a:hover {
-    background-color: #0A68FF;
+    background-color: #00704A;
     color: #fff;
     transition: 0.2s;
 }
@@ -267,6 +252,10 @@ try {
 }
 
 .checkout__form .checkout__form__input input:focus {
-    border: 1px solid #999999;
+    border: 1px solid #00704A;
+}
+.site-btn {
+    background-color: #00704A;
+    color: #fff;
 }
 </style>
