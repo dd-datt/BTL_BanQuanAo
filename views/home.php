@@ -21,10 +21,10 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                         <img class="img-fluid" src="upload/banner_quanao_main5.png" alt="Image">
 
                     </div>
-                    <div class="carousel-item">
+                    <!-- <div class="carousel-item">
                         <img class="img-fluid" src="upload/banner_quanao_main6.png" alt="Image">
 
-                    </div>
+                    </div> -->
                 </div>
                 <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
                     <div class="btn btn-dark" style="width: 45px; height: 45px;">
