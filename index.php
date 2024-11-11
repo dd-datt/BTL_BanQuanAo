@@ -50,19 +50,12 @@ if (!isset($_GET['url'])) {
             break;
             // Thanh toán
         case 'thanh-toan':
-            require_once "views/checkout.php";
+            require_once "views/thanhtoan1.php";
             break;
+            // Nếu ấn vào "Sửa" thì sang trag này, cho phép sửa thông tin đặt hàng
         case 'thanh-toan-2':
-            require_once "views/checkout-address.php";
+            require_once "views/thanhtoan2.php";
             break;
-            // Nếu ấn vào "Sửa" thì sang trag này
-        case 'thanh-toan-dia-chi2':
-            require_once "views/thanh-toan-dia-chi.php";
-            break;
-
-        // case 'remove-address':               --> không cần nữa vì sửa thôi ko cần xoá
-        //     require_once "views/remove-address.php";     
-        //     break;
         case 'cam-on':
             require_once "views/thanks.php";
             break;
