@@ -74,42 +74,276 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
 $html_alert = $BaseModel->alert_error_success($error, '');
 ?>
 
+
+    /* Css của admin */
+    <!-- Your custom CSS -->
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+           v2.0 | 20110126
+           License: none (public domain)
+        */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        h3{
+            color:white;
+            font-size: 40px;
+           
+
+        }
+
+        *{
+           box-sizing: border-box;
+        }
+
+        html{
+           width: 100%;
+           height: 100%;
+           font-family: 'Font Awesome 5 Freef';
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .overlay{
+            width: 170%;
+            height: 170%;
+            position: absolute;
+            background-image: url('anh1.jpg');
+            filter: blur(13px);
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 2;
+        }
+
+        .login-container{
+            position: relative;
+            width: 1090px;
+            z-index: 3;
+            height: 580px;
+            background-image: url('anh1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 100px;
+            color: white;
+            font-weight: 300;
+        }
+
+        .login-container>div:first-child{
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 100px 0;
+            padding-bottom: 70px;
+        }
+
+        .logo span{
+            font-family: 'Font Awesome 5 Freef';
+            font-size: 50px;
+        }
+
+        .logo i{
+            color:rgb(255, 255, 255);
+            font-size: 40px;
+        }
+
+       /* viền khung mở chỗ nhập */
+
+        .form-login{
+            width: 45%;
+            max-width: 48%;
+            height: 100%;
+            backdrop-filter: blur(8px);
+            background-color: rgba(54, 52, 52, 0.2);
+            padding: 100px 40px;
+            
+        }
+
+        .form-login .form-group{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .form-login .form-group input{
+            background-color: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid rgba(159, 171, 175, 0.534);
+            margin-top: 10px;
+            color: white;
+            font-size: 17px;
+        }
+
+        .form-login .form .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.658);
+            opacity: 1;
+        }
+
+        .form-login .form .heading{
+            font-size: 30px;
+            margin-top: 7px;
+
+           
+        }
+
+        .form-login .form .sign-up{
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-login .form .sign-up button{
+            background-color: rgb(211, 37, 37);
+            color: rgb(238, 227, 227);
+            width: 160px;
+            height: 35px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+        }
+
+        .form-login .form .sign-up button:hover{
+            background-color: rgb(143, 24, 24);
+            cursor: pointer;
+        }
+
+        .form-login .form .sign-up>div i{
+            position: absolute;
+            top: 50%;
+            right: 7%;
+            transform: translateY(-50%);
+            font-size: 12px;
+        }
+
+        
+        label.form-label { /* ten đn, mật khẩu */
+        font-size: 20px;
+         }
+
+        .sign-up a{
+            margin-left: 35px;
+            color: rgb(190, 189, 187);
+            font-size: 140px;
+            text-underline-position: under;
+        }
+
+        .sign-up a:hover{
+            color: red;
+        }
+        button {
+            width: 100%;
+            height: 50%;
+           padding:20px;
+            border-radius:20px;
+            background-color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+           
+        }
+         button:hover {
+        background-color: #696969;
+        transform: translateY(-2px);
+    }
+
+    button .active {
+        background-color: #8f4c8a;
+    }
+
+  
+    </style>
+</head>
 <body>
-    <div class="container-xxl position-relative bg-white d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+<div class="overlay"></div>
+    <div class="login-container">
+        <div>
+          
+           
         </div>
-        <!-- Spinner End -->
 
-        <!-- Sign In Start -->
-        <div class="container-fluid">
-            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-                    <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
-                        <form action="" method="post">
-                            <h3 class="text-center mb-4">Đăng nhập Admin</h3>
-                            <p class="text-danger">Vui lòng đăng nhập để vào trang quản trị</p>
-                            <?= $html_alert ?>
-                            <div class="form-floating mb-3">
-                                <input name="username" type="text" class="form-control" id="floatingInput" placeholder="Tên đăng nhập" required>
-                                <label for="floatingInput">Tên đăng nhập</label>
-                            </div>
-                            <div class="form-floating mb-4">
-                                <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Mật khẩu" required>
-                                <label for="floatingPassword">Mật khẩu</label>
-                            </div>
-
-                            <button type="submit" name="login" class="btn btn-primary py-3 w-100 mb-4">Đăng nhập</button>
-                        </form>
-                    </div>
+        <div class="form-login">
+            <form action="" method="post">
+                <h3 class="heading">Đăng nhập Admin</h3>      
+                <div class="form-group">
+                    <label for="username" class="form-label">Tên đăng nhập</label>
+                    <input id="username" name="username" type="text" placeholder="Tên đăng nhập" class="form-control" required>
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input id="password" name="password" type="password" placeholder="Mật khẩu" class="form-control" required>
+                </div>
+                <br>
+                <br>
+
+                <button type="submit" name="login" class="form-submit">Đăng nhập</button>
+            </form>
         </div>
-        <!-- Sign In End -->
     </div>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -124,6 +358,7 @@ $html_alert = $BaseModel->alert_error_success($error, '');
 
     <!-- Template Javascript -->
     <script src="public_admin/js/main.js"></script>
+    
 </body>
 
 </html>
