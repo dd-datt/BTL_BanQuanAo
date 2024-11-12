@@ -217,8 +217,7 @@ if (isset($_GET['id_sp'])) {
 
                             <div class="label_right sale">-<?= $discount_percentage ?></div>
                             <ul class="product__hover">
-                                <li><a href="upload/<?= $image ?> " class="image-popup"><span class="arrow_expand"></span></a>
-                                </li>
+
                                 <li>
                                     <a href="index.php?url=chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>"><span
                                             class="icon_search_alt"></span></a>
