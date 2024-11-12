@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
 
     if (empty(array_filter($error))) {
         // Insert dữ liệu user
-        $CustomerModel->user_insert($username, $password, $full_name, $image, $email, $phone, $address);
+        $CustomerModel->user_insert($username, password_hash($password, PASSWORD_DEFAULT), $full_name, $image, $email, $phone, $address);
         $_SESSION['user_register'] = [
             'username' => $username,
             'password' => $password

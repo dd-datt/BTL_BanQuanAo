@@ -32,7 +32,8 @@
         <?php if (isset($_SESSION['user'])) { ?>
             <div class="offcanvas__auth acount">
                 <a href="index.php?url=thong-tin-tai-khoan">
-                    <img src="upload/<?= $_SESSION['user']['image'] ?>" alt=""><?= $_SESSION['user']['username'] ?>
+                    <img src="upload/<?= $_SESSION['user']['image'] ? $_SESSION['user']['image'] : 'upload/user-default.png' ?>" alt="">
+                    <?= $_SESSION['user']['username'] ?>
                 </a>
             </div>
         <?php
@@ -45,6 +46,7 @@
         <?php
         }
         ?>
+
 
     </div>
     <!-- Offcanvas Menu End -->

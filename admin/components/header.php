@@ -1,3 +1,4 @@
+
 <body>
 
 
@@ -13,8 +14,8 @@
                 </a>
 
                 <div class="navbar-nav w-100">
-                    <a href="index.php" class="nav-item nav-link active"><i
-                            class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <!-- <a href="index.php" class="nav-item nav-link active"><i
+                            class="fa fa-tachometer-alt me-2"></i>Dashboard</a> -->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                                 class="fa fa-shopping-basket me-2"></i>Đơn hàng</a>
@@ -84,13 +85,15 @@
 
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="public_admin/img/user-default.png" alt=""
-                                style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">ADMIN</span>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="rounded-circle me-lg-2"
+                                src="<?= isset($_SESSION['user']['image']) && !empty($_SESSION['user']['image']) ? '../upload/' . $_SESSION['user']['image'] : 'public_admin/img/user-default.png' ?>"
+                                alt="User Image"
+                                style="width: 40px; height: 40px;"> 
+                                <span class="d-none d-lg-inline-flex"><?= isset($_SESSION['user']['username']) ? $_SESSION['user']['username'] : 'ADMIN' ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-white border-1 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">Hồ sơ</a>
+                            <a href="../index.php" class="dropdown-item">Trang khách hàng</a>
                             <a href="index.php?quanli=dang-xuat" class="dropdown-item">Đăng xuất</a>
                         </div>
                     </div>
