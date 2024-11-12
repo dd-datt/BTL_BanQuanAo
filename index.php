@@ -42,7 +42,7 @@ if (!isset($_GET['url'])) {
             break;
             // Liên hệ
         case 'lien-he':
-            require_once "views/contact.php";
+            require_once "views/lienhe.php";
             break;
             // Giỏ hàng
         case 'gio-hang':
