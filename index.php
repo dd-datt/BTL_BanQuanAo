@@ -56,6 +56,7 @@ if (!isset($_GET['url'])) {
         case 'thanh-toan-2':
             require_once "views/thanhtoan2.php";
             break;
+            //Sau khi đặt hàng thành công chuyển sang trang cảm ơn
         case 'cam-on':
             require_once "views/thanks.php";
             break;

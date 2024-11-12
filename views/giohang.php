@@ -192,7 +192,7 @@
         </div>
     </div>
 </section>
-<!-- Shop Cart Section End -->
+<!-- Kết thúc phần hiển thị giỏ hàng -->
 <?php }else { ?>
 <div class="row" style="margin-bottom: 400px;">
     <div class="col-lg-12 col-md-12">
