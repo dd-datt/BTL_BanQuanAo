@@ -42,7 +42,7 @@ if (!isset($_GET['url'])) {
             break;
             // Liên hệ
         case 'lien-he':
-            require_once "views/contact.php";
+            require_once "views/lienhe.php";
             break;
             // Giỏ hàng
         case 'gio-hang':
@@ -56,17 +56,11 @@ if (!isset($_GET['url'])) {
         case 'thanh-toan-2':
             require_once "views/thanhtoan2.php";
             break;
+            //Sau khi đặt hàng thành công chuyển sang trang cảm ơn
         case 'cam-on':
             require_once "views/thanks.php";
             break;
-            // Đơn hàng
-        case 'don-hang':
-            require_once "views/my-order.php";
-            break;
-        case 'chi-tiet-don-hang':
-            require_once "views/my-orderdetails.php";
-            break;
-
+        
             // User
         case 'dang-nhap':
             require_once "views/user/login.php";

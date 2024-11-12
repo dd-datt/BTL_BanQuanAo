@@ -9,7 +9,7 @@ if (isset($_GET['id']) && $_GET['id'] > 0) {
 $list_catgories = $CategoryModel->select_all_categories();
 ?>
 
-<!-- Breadcrumb Begin -->
+<!-- Vị trí của trang web -->
 <div class="breadcrumb-option">
     <div class="container">
         <div class="row">
@@ -31,9 +31,9 @@ $list_catgories = $CategoryModel->select_all_categories();
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
+<!-- END Vị trí của trang web -->
 
-<!-- Shop Section Begin -->
+<!-- Trang cửa hàng theo danh mục -->
 <section class="shop spad">
     <div class="container">
         <div class="row">
@@ -72,6 +72,8 @@ $list_catgories = $CategoryModel->select_all_categories();
             <?php if (count($list_products) > 0) { ?>
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
+
+                        <!-- Hiện thị danh sách sản phẩm -->
                         <?php foreach ($list_products as $value) {
                             extract($value);
                             $discount_percentage = $ProductModel->discount_percentage($price, $sale_price);
@@ -79,15 +81,19 @@ $list_catgories = $CategoryModel->select_all_categories();
                             <div class="col-lg-4 col-md-6 col-6-rp-mobile">
                                 <div class="product__item sale">
                                     <div class="product__item__pic set-bg" data-setbg="upload/<?= $image ?>">
-                                        <!-- <div class="label sale">New</div> -->
+
+                                        <!-- Giảm giá -->
                                         <div class="label_right sale">-<?= $discount_percentage ?></div>
+
+                                        <!-- Nút khi di chuyển chuột vào -->
                                         <ul class="product__hover">
-                                            <li><a href="upload/<?= $image ?>" class="image-popup"><span class="arrow_expand"></span></a></li>
+
+                                            <!-- Nút đi đến trang chi tiết sp -->
                                             <li>
                                                 <a href="index.php?url=chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>"><span class="icon_search_alt"></span></a>
                                             </li>
 
-
+                                            <!-- Nút thêm vào giỏ hàng -->
                                             <li>
                                                 <?php if (isset($_SESSION['user'])) { ?>
                                                     <form action="index.php?url=gio-hang" method="post">
@@ -114,14 +120,9 @@ $list_catgories = $CategoryModel->select_all_categories();
 
                                     </div>
                                     <div class="product__item__text">
-                                        <h6 class="text-truncate-1"><a href="product-details.html"><?= $name ?></a></h6>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
+                                        <!-- Hiện thị tên sp -->
+                                        <h6 class="text-truncate-1"><a href=""><?= $name ?></a></h6>
+                                        <!-- Hiện thị giá bán -->
                                         <div class="product__price"><?= number_format($sale_price) . "₫" ?> <span><?= number_format($price) . "đ" ?> </span></div>
                                     </div>
                                 </div>
@@ -148,4 +149,4 @@ $list_catgories = $CategoryModel->select_all_categories();
         </div>
     </div>
 </section>
-<!-- Shop Section End -->
+<!-- END Trang cửa hàng theo danh mục -->

@@ -94,7 +94,7 @@ ol {
   bottom: -4px;
   height: 2px;
   width: 70px;
-  background: #0A68FF;
+  background: green;
   content: "";
 }
 
@@ -278,16 +278,15 @@ ol {
 }
 
 .text-truncate-1 {
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* Giới hạn tối đa 1 dòng */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  padding: 0;
-  height: 22px;
+  display: block;
   white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-wrap: break-word;
+  min-height: 50px; /* Đảm bảo chiều cao tối thiểu */
+  height: auto; /* Cho phép chiều cao tự động thay đổi theo nội dung */
 }
+
 
 .text-truncate-2 {
   display: -webkit-box;
@@ -802,7 +801,7 @@ ol {
 }
 .services__item i {
   font-size: 36px;
-  color: #0A68FF;
+  color: green;
   position: absolute;
   left: 0;
   top: 4px;
@@ -1123,20 +1122,20 @@ ol {
   border: 1px solid #F2F4F5;
 }
 .product__item:hover {
-  border: 1px solid #0A68FF;
+  border: 1px solid green;
 }
 .product__item:hover .product__hover li {
   opacity: 1;
   top: 0;
 }
 .product__item.sale .product__item__pic .label {
-  background: #0A68FF;
+  background:green;
 }
 .product__item.sale .product__item__text {
   margin-bottom: 10px;
 }
 .product__item.sale .product__item__text .product__price {
-  color: #0A68FF;
+  color: green;
 }
 
 .product__item__pic {
@@ -1227,7 +1226,7 @@ ol {
   margin: 0;
 }
 .product__hover li:hover a {
-  background: #0A68FF;
+  background: green;
 }
 .product__hover li:hover a span {
   color: #ffffff;
@@ -1689,7 +1688,7 @@ ol {
 .product__details__price {
   font-size: 30px;
   font-weight: 600;
-  color: #0A68FF;
+  color: green;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -1752,7 +1751,7 @@ ol {
   display: inline-block;
   font-size: 14px;
   color: #ffffff;
-  background: #0A68FF;
+  background: green;
   font-weight: 600;
   text-transform: uppercase;
   padding: 14px 30px 15px;
