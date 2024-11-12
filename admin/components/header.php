@@ -21,7 +21,7 @@
                                 class="fa fa-shopping-basket me-2"></i>Đơn hàng</a>
                         <div class="dropdown-menu bg-transparent border-0">
 
-                            <a href="index.php?quanli=danh-sach-don-hang" class="dropdown-item">Tất cả đơn</a>
+                            <a href="index.php?quanli=danh-sach-don-hang" class="dropdown-item">Tất cả đơn hàng</a>
                             <a href="danh-sach-don-cho" class="dropdown-item">Đơn chờ xác nhận</a>
 
                         </div>
