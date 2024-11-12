@@ -193,13 +193,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                                 <h6>
                                     <a href="chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>" class="text-dark"><?= $name ?></a>
                                 </h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                
                                 <div class="product__price"><?= number_format($sale_price) ?>₫</div>
                             </div>
                         </div>
@@ -226,13 +220,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                                 <h6>
                                     <a href="chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>" class="text-dark"><?= $name ?></a>
                                 </h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                               
                                 <div class="product__price"><?= number_format($sale_price) ?>₫</div>
                             </div>
                         </div>
@@ -259,13 +247,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                                 <h6>
                                     <a href="chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>" class="text-dark"><?= $name ?></a>
                                 </h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                
                                 <div class="product__price"><?= number_format($sale_price) ?>₫</div>
                             </div>
                         </div>
