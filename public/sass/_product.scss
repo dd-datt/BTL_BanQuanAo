@@ -9,7 +9,7 @@
 .filter__controls {
   text-align: right;
   margin-bottom: 50px;
-  
+
   li {
     font-size: 14px;
     list-style: none;
@@ -20,21 +20,20 @@
     cursor: pointer;
 
     &.active {
-
       &:after {
         opacity: 1;
       }
     }
 
     &:after {
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        height: 2px;
-        width: 100%;
-        background: $primary-color;
-        content: "";
-        opacity: 0;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 100%;
+      background: $primary-color;
+      content: "";
+      opacity: 0;
     }
 
     &:last-child {
@@ -46,8 +45,8 @@
 .product__item {
   margin-bottom: 35px;
   border-radius: 10px;
-	overflow: hidden;
-  border: 1px solid #F2F4F5;
+  overflow: hidden;
+  border: 1px solid #f2f4f5;
   &:hover {
     border: 1px solid $primary-color;
   }
@@ -62,9 +61,7 @@
   }
 
   &.sale {
-
     .product__item__pic {
-
       .label {
         background: $primary-color;
       }
@@ -73,7 +70,7 @@
     .product__item__text {
       margin-bottom: 10px;
       .product__price {
-        color: $primary-color;
+        color: green;
       }
     }
   }
@@ -94,7 +91,7 @@
     position: absolute;
     left: 10px;
     top: 10px;
-    
+
     &.new {
       background: #36a300;
     }
@@ -104,7 +101,7 @@
     }
 
     &.stockblue {
-      background: #0066bd!important;
+      background: #0066bd !important;
     }
 
     &.sale {
@@ -124,7 +121,7 @@
     top: 10px;
 
     &.sale {
-      background: $danger-color
+      background: $danger-color;
     }
   }
 }
@@ -135,7 +132,7 @@
   width: 100%;
   bottom: 30px;
   text-align: center;
-  
+
   li {
     list-style: none;
     display: inline-block;
@@ -164,10 +161,9 @@
     }
 
     &:hover {
-
       a {
         background: $primary-color;
-        
+
         span {
           color: $white-color;
           -webkit-transform: rotate(360deg);
@@ -186,13 +182,13 @@
       line-height: 48px;
       text-align: center;
       border-radius: 50%;
-      @include transition(all, .5s);
+      @include transition(all, 0.5s);
 
       span {
         position: relative;
         -webkit-transform: rotate(0);
         transform: rotate(0);
-        @include transition(all, .3s);
+        @include transition(all, 0.3s);
         display: inline-block;
       }
     }
@@ -204,7 +200,6 @@
   padding-top: 22px;
 
   h6 {
-    
     a {
       font-size: 14px;
       color: $heading-color;
@@ -226,7 +221,7 @@
     }
   }
   .product__price {
-    color: $heading-color;
+    color: green;
     font-weight: 600;
 
     span {
@@ -236,4 +231,7 @@
       margin-left: 4px;
     }
   }
+  // #product__price {
+  //   color: green;
+  // }
 }
