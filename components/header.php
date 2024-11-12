@@ -90,8 +90,9 @@
 
                         <?php if (isset($_SESSION['user'])) { ?>
                             <div class="header__right__auth acount">
-                                <a href="index.php?url=thong-tin-tai-khoan">
-                                    <img src="upload/<?= $_SESSION['user']['image'] ?>" alt=""><?= $_SESSION['user']['username'] ?>
+                                <a href="index.php?url=thong-tin-tai-khoan" style="color: white;">
+                                    <img src="upload/<?= $_SESSION['user']['image'] ?>" alt="">
+                                    <?= $_SESSION['user']['username'] ?>
                                 </a>
 
                             </div>
