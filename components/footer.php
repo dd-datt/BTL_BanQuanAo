@@ -7,7 +7,7 @@
             <div class="col-lg-4 col-md-6 col-sm-7">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="./index.php"><img src="upload/logo.png" alt=""></a>
+                        <a href="./index.php"><img src="upload/logo.jpg" alt=""></a>
                     </div>
                     <p style="color: white; font-weight: 600;">Chào mừng bạn đến với Fashion Store nơi cung cấp quần áo chất lượng</p>
 
