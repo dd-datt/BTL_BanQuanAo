@@ -1,5 +1,6 @@
 <?php
 $list_catgories = $CategoryModel->select_all_categories();
+$list_products = $ProductModel->select_products_limit(12);
 ?>
 
 

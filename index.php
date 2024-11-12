@@ -92,7 +92,7 @@ if (!isset($_GET['url'])) {
             break;
             // Đổi trả
         case 'doi-tra':
-            require_once "view/doi-tra.php";
+            require_once "views/doi-tra.php";
             break;
 
 

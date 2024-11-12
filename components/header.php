@@ -108,7 +108,7 @@
 
                         <?php if (isset($_SESSION['user'])) { ?>
                             <ul class="header__right__widget">
-                                <li><span class="icon_search search-switch"></span></li>
+                                <li><span class="icon_search search-switch" style="color: white;"></span></li>
 
                             </ul>
                         <?php } else { ?>
