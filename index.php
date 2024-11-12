@@ -59,14 +59,7 @@ if (!isset($_GET['url'])) {
         case 'cam-on':
             require_once "views/thanks.php";
             break;
-            // Đơn hàng
-        case 'don-hang':
-            require_once "views/my-order.php";
-            break;
-        case 'chi-tiet-don-hang':
-            require_once "views/my-orderdetails.php";
-            break;
-
+        
             // User
         case 'dang-nhap':
             require_once "views/user/login.php";
