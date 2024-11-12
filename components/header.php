@@ -52,8 +52,8 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
-    <header class="header" style="background-color: #00704a;">
-        <div class="container" >
+    <header class="header">
+        <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-2">
                     <div class="header__logo">
@@ -63,15 +63,15 @@
                 <div class="col-xl-6 col-lg-7">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="index.php" style="color: white;">TRANG CHỦ</a></li>
+                            <li><a href="index.php">TRANG CHỦ</a></li>
 
-                            <li><a href="index.php?url=cua-hang" style="color: white;">Cửa hàng</a></li>
+                            <li><a href="index.php?url=cua-hang">Cửa hàng</a></li>
 
-                            <li><a href="index.php?url=doi-tra" style="color: white;">đổi trả</a></li>
+                            <li><a href="index.php?url=doi-tra">đổi trả</a></li>
 
-                            <li><a href="index.php?url=lien-he" style="color: white;">LIÊN HỆ</a></li>
+                            <li><a href="index.php?url=lien-he">LIÊN HỆ</a></li>
 
-                            <li><a href="#"><i class="fas fa-shopping-cart" style="color: white;"></i></a>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a>
                                 <ul class="dropdown">
                                     <li><a href="index.php?url=gio-hang">Giỏ hàng</a></li>
                                     <li><a href="index.php?url=thanh-toan">Thanh toán</a></li>
@@ -99,8 +99,8 @@
                         } else {
                         ?>
                             <div class="header__right__auth">
-                                <a href="index.php?url=dang-nhap" style="color: white;">Đăng nhập</a>
-                                <a href="index.php?url=dang-ky" style="color: white;">Đăng ký</a>
+                                <a href="index.php?url=dang-nhap">Đăng nhập</a>
+                                <a href="index.php?url=dang-ky">Đăng ký</a>
                             </div>
                         <?php
                         }
@@ -114,7 +114,7 @@
                         <?php } else { ?>
 
                             <ul class="header__right__widget">
-                                <li><span class="icon_search search-switch" style="color: white;"></span></li>
+                                <li><span class="icon_search search-switch"></span></li>
 
                             </ul>
                         <?php } ?>
@@ -127,4 +127,3 @@
         </div>
     </header>
     <!-- Header Section End -->
-    
