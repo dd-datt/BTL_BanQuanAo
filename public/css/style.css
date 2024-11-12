@@ -278,16 +278,15 @@ ol {
 }
 
 .text-truncate-1 {
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* Giới hạn tối đa 1 dòng */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  padding: 0;
-  height: 22px;
+  display: block;
   white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-wrap: break-word;
+  min-height: 50px; /* Đảm bảo chiều cao tối thiểu */
+  height: auto; /* Cho phép chiều cao tự động thay đổi theo nội dung */
 }
+
 
 .text-truncate-2 {
   display: -webkit-box;
