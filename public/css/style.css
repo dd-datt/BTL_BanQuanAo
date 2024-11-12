@@ -130,13 +130,13 @@ ol {
   font-weight: 600;
   padding: 12px 30px 10px;
   color: #ffffff;
-  background: #0a68ff;
+  background: #0A68FF;
 }
 
 .site-btn {
   font-size: 14px;
   color: #ffffff;
-  background: #0a68ff;
+  background: #0A68FF;
   font-weight: 600;
   border: none;
   text-transform: uppercase;
@@ -333,7 +333,13 @@ ol {
   color: #000000;
   border-color: #000000;
 }
-
+.btn-dark{
+  display: none;
+  
+}
+.carousel:hover .btn-dark {
+  display: block;
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -426,7 +432,7 @@ ol {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #0a68ff;
+  background: #0A68FF;
   content: "";
   -webkit-transition: all, 0.5s;
   -moz-transition: all, 0.5s;
@@ -509,7 +515,7 @@ ol {
 }
 
 .acount:hover {
-  border: 1px solid #0a68ff;
+  border: 1px solid #0A68FF;
 }
 
 .acount img {
@@ -571,7 +577,7 @@ ol {
 
 .banner__text span {
   font-size: 18px;
-  color: #0a68ff;
+  color: #0A68FF;
   text-transform: uppercase;
 }
 .banner__text h1 {
@@ -595,7 +601,7 @@ ol {
   bottom: 0;
   height: 2px;
   width: 100%;
-  background: #0a68ff;
+  background: #0A68FF;
   content: "";
 }
 
@@ -618,7 +624,7 @@ ol {
   margin-right: 10px;
 }
 .banner__slider.owl-carousel .owl-dots button.active {
-  background: #0a68ff;
+  background: #0A68FF;
 }
 .banner__slider.owl-carousel .owl-dots button:last-child {
   margin-right: 0;
@@ -709,7 +715,7 @@ ol {
   bottom: 0;
   height: 2px;
   width: 100%;
-  background: #0a68ff;
+  background: #0A68FF;
   content: "";
 }
 
@@ -739,13 +745,13 @@ ol {
 }
 .discount__text__title h2 {
   font-size: 60px;
-  color: #0a68ff;
+  color: #0A68FF;
   font-family: "Cookie", cursive;
   line-height: 46px;
   margin-bottom: 10px;
 }
 .discount__text__title h5 {
-  color: #0a68ff;
+  color: #0A68FF;
   font-weight: 700;
 }
 .discount__text__title h5 span {
@@ -969,13 +975,13 @@ ol {
   margin-bottom: 0;
 }
 .footer__copyright__text a {
-  color: #5c5c5c;
+  color: #5C5C5C;
 }
 .footer__copyright__text i {
-  color: #0a68ff;
+  color: #0A68FF;
 }
 .footer__copyright__text a:hover {
-  color: #0a68ff;
+  color: #0A68FF;
 }
 
 /*---------------------
@@ -1067,7 +1073,7 @@ ol {
   bottom: 0;
   height: 2px;
   width: 100%;
-  background: #0a68ff;
+  background: #0A68FF;
   content: "";
 }
 
@@ -1101,7 +1107,7 @@ ol {
   bottom: -4px;
   height: 2px;
   width: 100%;
-  background: #0a68ff;
+  background: #0A68FF;
   content: "";
   opacity: 0;
 }
@@ -1113,23 +1119,23 @@ ol {
   margin-bottom: 35px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #f2f4f5;
+  border: 1px solid #F2F4F5;
 }
 .product__item:hover {
-  border: 1px solid green;
+  border: 1px solid #0A68FF;
 }
 .product__item:hover .product__hover li {
   opacity: 1;
   top: 0;
 }
 .product__item.sale .product__item__pic .label {
-  background: #0a68ff;
+  background: #0A68FF;
 }
 .product__item.sale .product__item__text {
   margin-bottom: 10px;
 }
 .product__item.sale .product__item__text .product__price {
-  color: green;
+  color: #0A68FF;
 }
 
 .product__item__pic {
@@ -1158,7 +1164,7 @@ ol {
   background: #0066bd !important;
 }
 .product__item__pic .label.sale {
-  background: #0a68ff;
+  background: #0A68FF;
 }
 .product__item__pic .label_right {
   font-size: 12px;
@@ -1351,7 +1357,7 @@ ol {
 }
 
 .categories__accordion .card-heading a:after,
-.categories__accordion .card-heading > a.active[aria-expanded="false"]:after {
+.categories__accordion .card-heading > a.active[aria-expanded=false]:after {
   content: "\f107";
   font-size: 14px;
   font-family: "FontAwesome";
@@ -1371,7 +1377,7 @@ ol {
   top: -1px;
 }
 
-.categories__accordion .card-heading a[aria-expanded="true"]:after,
+.categories__accordion .card-heading a[aria-expanded=true]:after,
 .categories__accordion .card-heading > a.active:after {
   content: "\f106";
   font-size: 14px;
@@ -1424,7 +1430,7 @@ ol {
   border-radius: 2px;
 }
 .filter-range-wrap .range-slider .price-input .filter-price:hover {
-  border: 2px solid #0a68ff;
+  border: 2px solid #0A68FF;
 }
 .filter-range-wrap .range-slider .price-input p {
   font-size: 16px;
@@ -1470,31 +1476,27 @@ ol {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #0a68ff;
+  background: #0A68FF;
   border: none;
   outline: none;
   cursor: pointer;
 }
 
 .filter-range-wrap .price-range .ui-slider-range {
-  background: #0a68ff;
+  background: #0A68FF;
   border-radius: 0;
 }
 
-.sidebar__sizes,
-.sidebar__color {
+.sidebar__sizes, .sidebar__color {
   margin-bottom: 40px;
 }
-.sidebar__sizes .section-title,
-.sidebar__color .section-title {
+.sidebar__sizes .section-title, .sidebar__color .section-title {
   margin-bottom: 35px;
 }
-.sidebar__sizes .section-title h4,
-.sidebar__color .section-title h4 {
+.sidebar__sizes .section-title h4, .sidebar__color .section-title h4 {
   font-size: 18px;
 }
-.sidebar__sizes .size__list label,
-.sidebar__color .size__list label {
+.sidebar__sizes .size__list label, .sidebar__color .size__list label {
   display: block;
   padding-left: 20px;
   font-size: 14px;
@@ -1503,22 +1505,18 @@ ol {
   position: relative;
   cursor: pointer;
 }
-.sidebar__sizes .size__list label input,
-.sidebar__color .size__list label input {
+.sidebar__sizes .size__list label input, .sidebar__color .size__list label input {
   position: absolute;
   visibility: hidden;
 }
-.sidebar__sizes .size__list label input:checked ~ .checkmark,
-.sidebar__color .size__list label input:checked ~ .checkmark {
-  border-color: #0a68ff;
+.sidebar__sizes .size__list label input:checked ~ .checkmark, .sidebar__color .size__list label input:checked ~ .checkmark {
+  border-color: #0A68FF;
 }
-.sidebar__sizes .size__list label input:checked ~ .checkmark:after,
-.sidebar__color .size__list label input:checked ~ .checkmark:after {
-  border-color: #0a68ff;
+.sidebar__sizes .size__list label input:checked ~ .checkmark:after, .sidebar__color .size__list label input:checked ~ .checkmark:after {
+  border-color: #0A68FF;
   opacity: 1;
 }
-.sidebar__sizes .size__list label .checkmark,
-.sidebar__color .size__list label .checkmark {
+.sidebar__sizes .size__list label .checkmark, .sidebar__color .size__list label .checkmark {
   position: absolute;
   left: 0;
   top: 4px;
@@ -1527,8 +1525,7 @@ ol {
   border: 1px solid #444444;
   border-radius: 2px;
 }
-.sidebar__sizes .size__list label .checkmark:after,
-.sidebar__color .size__list label .checkmark:after {
+.sidebar__sizes .size__list label .checkmark:after, .sidebar__color .size__list label .checkmark:after {
   position: absolute;
   left: 0px;
   top: -2px;
@@ -1551,10 +1548,10 @@ ol {
   display: inline-block;
   height: 40px;
   width: 40px;
-  border: 1px solid #0a68ff;
+  border: 1px solid #0A68FF;
   border-radius: 50%;
   font-size: 14px;
-  color: #0a68ff;
+  color: #0A68FF;
   font-weight: 600;
   line-height: 40px;
   text-align: center;
@@ -1572,13 +1569,13 @@ ol {
   font-weight: 600;
 }
 .pagination__option a:hover {
-  background: #0a68ff;
-  border-color: #0a68ff;
+  background: #0A68FF;
+  border-color: #0A68FF;
   color: #ffffff;
 }
 .pagination__option .active {
-  background: #0a68ff;
-  border-color: #0a68ff;
+  background: #0A68FF;
+  border-color: #0A68FF;
   color: #ffffff;
 }
 
@@ -1823,23 +1820,11 @@ ol {
   position: absolute;
   visibility: hidden;
 }
-.product__details__widget
-  ul
-  li
-  .stock__checkbox
-  label
-  input:checked
-  ~ .checkmark {
-  border-color: #0a68ff;
+.product__details__widget ul li .stock__checkbox label input:checked ~ .checkmark {
+  border-color: #0A68FF;
 }
-.product__details__widget
-  ul
-  li
-  .stock__checkbox
-  label
-  input:checked
-  ~ .checkmark:after {
-  border-color: #0a68ff;
+.product__details__widget ul li .stock__checkbox label input:checked ~ .checkmark:after {
+  border-color: #0A68FF;
   opacity: 1;
 }
 .product__details__widget ul li .stock__checkbox label .checkmark {
@@ -1871,13 +1856,7 @@ ol {
   position: relative;
   margin-right: 20px;
 }
-.product__details__widget
-  ul
-  li
-  .color__checkbox
-  label.active
-  input
-  ~ .checkmark:after {
+.product__details__widget ul li .color__checkbox label.active input ~ .checkmark:after {
   border-color: #ffffff;
   opacity: 1;
 }
@@ -1888,13 +1867,7 @@ ol {
   position: absolute;
   visibility: hidden;
 }
-.product__details__widget
-  ul
-  li
-  .color__checkbox
-  label
-  input:checked
-  ~ .checkmark:after {
+.product__details__widget ul li .color__checkbox label input:checked ~ .checkmark:after {
   border-color: #ffffff;
   opacity: 1;
 }
@@ -1941,7 +1914,7 @@ ol {
   margin-right: 0;
 }
 .product__details__widget ul li .size__btn label.active {
-  color: #0a68ff;
+  color: #0A68FF;
 }
 .product__details__widget ul li .size__btn label input {
   position: absolute;
@@ -2073,30 +2046,19 @@ ol {
   overflow: hidden;
   padding-top: 23px;
 }
-.shop__cart__table
-  tbody
-  tr
-  .cart__product__item
-  .cart__product__item__title
-  h6 {
+.shop__cart__table tbody tr .cart__product__item .cart__product__item__title h6 {
   color: #111111;
   font-weight: 600;
   width: 90%;
 }
-.shop__cart__table
-  tbody
-  tr
-  .cart__product__item
-  .cart__product__item__title
-  .rating
-  i {
+.shop__cart__table tbody tr .cart__product__item .cart__product__item__title .rating i {
   font-size: 10px;
   color: #e3c01c;
   margin-right: -4px;
 }
 .shop__cart__table tbody tr .cart__price {
   font-size: 16px;
-  color: #0a68ff;
+  color: #0A68FF;
   font-weight: 600;
   width: 190px;
 }
@@ -2118,7 +2080,7 @@ ol {
 }
 .shop__cart__table tbody tr .cart__total {
   font-size: 16px;
-  color: #0a68ff;
+  color: #0A68FF;
   font-weight: 600;
   width: 150px;
 }
@@ -2155,7 +2117,7 @@ ol {
   background: #f5f5f5;
 }
 .cart__btn a span {
-  color: #0a68ff;
+  color: #0A68FF;
   font-size: 14px;
   margin-right: 5px;
 }
@@ -2170,7 +2132,7 @@ ol {
   border: none;
 }
 .cart__btn button span {
-  color: #0a68ff;
+  color: #0A68FF;
   font-size: 14px;
   margin-right: 5px;
 }
@@ -2228,7 +2190,7 @@ ol {
   line-height: 40px;
 }
 .cart__total__procced ul li span {
-  color: #0a68ff;
+  color: #0A68FF;
   float: right;
 }
 .cart__total__procced .primary-btn {
@@ -2251,7 +2213,7 @@ ol {
   color: #444444;
   padding: 14px 0;
   background: #f5f5f5;
-  border-top: 2px solid #0a68ff;
+  border-top: 2px solid #0A68FF;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -2261,7 +2223,7 @@ ol {
 }
 .coupon__link span {
   font-size: 14px;
-  color: #0a68ff;
+  color: #0A68FF;
 }
 
 .checkout__form h5 {
@@ -2278,7 +2240,7 @@ ol {
   margin-bottom: 10px;
 }
 .checkout__form .checkout__form__input p span {
-  color: #0a68ff;
+  color: #0A68FF;
 }
 .checkout__form .checkout__form__input input {
   height: 50px;
@@ -2311,14 +2273,10 @@ ol {
   visibility: hidden;
 }
 .checkout__form .checkout__form__checkbox label input:checked ~ .checkmark {
-  border-color: #0a68ff;
+  border-color: #0A68FF;
 }
-.checkout__form
-  .checkout__form__checkbox
-  label
-  input:checked
-  ~ .checkmark:after {
-  border-color: #0a68ff;
+.checkout__form .checkout__form__checkbox label input:checked ~ .checkmark:after {
+  border-color: #0A68FF;
   opacity: 1;
 }
 .checkout__form .checkout__form__checkbox label .checkmark {
@@ -2410,7 +2368,7 @@ ol {
   line-height: 40px;
 }
 .checkout__order__total ul li span {
-  color: #0a68ff;
+  color: #0A68FF;
   float: right;
 }
 
@@ -2432,10 +2390,10 @@ ol {
   visibility: hidden;
 }
 .checkout__order__widget label input:checked ~ .checkmark {
-  border-color: #0a68ff;
+  border-color: #0A68FF;
 }
 .checkout__order__widget label input:checked ~ .checkmark:after {
-  border-color: #0a68ff;
+  border-color: #0A68FF;
   opacity: 1;
 }
 .checkout__order__widget label .checkmark {
@@ -2562,7 +2520,7 @@ ol {
   transition: all, 0.3s;
 }
 .blog__sidebar__item ul li a:hover {
-  color: #0a68ff;
+  color: #0A68FF;
 }
 .blog__sidebar__item ul li a:hover span {
   color: #111111;
@@ -2647,7 +2605,7 @@ ol {
 .blog__details__item__title .tip {
   font-size: 12px;
   color: #ffffff;
-  background: #0a68ff;
+  background: #0A68FF;
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
@@ -2698,7 +2656,7 @@ ol {
 }
 
 .blog__details__quote {
-  border-top: 2px solid #0a68ff;
+  border-top: 2px solid #0A68FF;
   position: relative;
   padding-top: 22px;
   margin-bottom: 20px;
@@ -2707,7 +2665,7 @@ ol {
   height: 30px;
   width: 30px;
   font-size: 18px;
-  color: #0a68ff;
+  color: #0A68FF;
   background: #ffffff;
   position: absolute;
   left: 0;
@@ -2797,7 +2755,7 @@ ol {
   bottom: -5px;
   height: 1px;
   width: 100%;
-  background: #0a68ff;
+  background: #0A68FF;
   content: "";
 }
 
@@ -2844,7 +2802,7 @@ ol {
 }
 .blog__comment__item__text ul li i {
   font-size: 14px;
-  color: #0a68ff;
+  color: #0A68FF;
   margin-right: 5px;
 }
 
@@ -2881,7 +2839,7 @@ ol {
 }
 .contact__address ul li h6 i {
   font-size: 16px;
-  color: #0a68ff;
+  color: #0A68FF;
   margin-right: 5px;
 }
 .contact__address ul li p {
@@ -3548,7 +3506,7 @@ ol {
 }
 
 .track .step.active:before {
-  background: #009cff;
+  background: #009CFF;
 }
 
 .track .step::before {
@@ -3561,7 +3519,7 @@ ol {
 }
 
 .track .step.active .icon {
-  background: #009cff;
+  background: #009CFF;
   color: #fff;
 }
 
@@ -3634,7 +3592,7 @@ textarea {
   font-size: 25px;
 }
 
-input[type="button"] {
+input[type=button] {
   cursor: pointer;
 }
 
@@ -3649,7 +3607,7 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-.input-group input[type="button"] {
+.input-group input[type=button] {
   background-color: #ffffff;
   font-size: 25px;
   min-width: 38px;
@@ -3679,7 +3637,7 @@ input::-webkit-inner-spin-button {
 .input-next-cart {
   height: 50px;
   width: 130px;
-  border: 2px solid #ebebeb;
+  border: 1px solid #ebebeb;
   border-radius: 50px;
   overflow: hidden;
 }
@@ -3723,7 +3681,7 @@ input::-webkit-inner-spin-button {
 }
 
 .badge {
-  background-color: #0a68ff;
+  background-color: #0A68FF;
   margin-bottom: 10px;
   border-radius: 10px;
   color: white;
@@ -3754,7 +3712,7 @@ input::-webkit-inner-spin-button {
 }
 
 .shopping-cart .shopping-cart-header {
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #E8E8E8;
   padding-bottom: 15px;
 }
 
@@ -3766,7 +3724,7 @@ input::-webkit-inner-spin-button {
 }
 
 .button {
-  background: #0a68ff;
+  background: #0A68FF;
   color: white;
   text-align: center;
   padding: 12px;
@@ -3795,7 +3753,7 @@ input::-webkit-inner-spin-button {
 }
 
 .courses-area .properties__card:hover {
-  box-shadow: 0px 1px 1px 0px #0a68ff;
+  box-shadow: 0px 1px 1px 0px #0A68FF;
 }
 
 .courses-area .properties__img img {
@@ -3825,15 +3783,15 @@ input::-webkit-inner-spin-button {
 
 .courses-area .properties__caption h3 a:hover {
   text-decoration: underline;
-  color: #4255a4;
+  color: #4255A4;
 }
 
 .courses-area .properties__caption P {
-  color: #6e7697;
+  color: #6E7697;
 }
 
 .courses-area .properties__caption P span {
-  color: #c86fff;
+  color: #C86FFF;
   font-size: 16px;
 }
 
@@ -3857,24 +3815,24 @@ input::-webkit-inner-spin-button {
 }
 .courses-area .properties__footer .restaurant-name p {
   display: inline-block;
-  color: #6e7697;
+  color: #6E7697;
 }
 
 .courses-area .properties__footer .restaurant-name p span {
-  color: #ff7b2e;
+  color: #FF7B2E;
   font-size: 12px;
 }
 
 .courses-area .properties__footer .price span {
   cursor: pointer;
   font-weight: 700;
-  color: #4255a4;
+  color: #4255A4;
   font-size: 23px;
 }
 
 .courses-area .properties:hover .border-btn2 {
   color: #fff;
-  background: #ff9f67;
+  background: #FF9F67;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -o-transition: 0.4s;

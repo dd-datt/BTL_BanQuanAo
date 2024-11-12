@@ -9,8 +9,12 @@ if (isset($_SESSION['user_register'])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signin"])) {
+    // Lấy tên người dùng và mật khẩu từ form
     $username = trim($_POST["username_login"]);
     $password = trim($_POST["password_login"]);
+
+    // Chuyển đổi tên người dùng về dạng viết hoa chữ cái đầu
+    $username = ucwords($username);
 
     if (!empty($username) && !empty($password)) {
         $user = $CustomerModel->get_user_by_username($username);
@@ -19,7 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signin"])) {
             if ($user[0]['active'] != 1) {
                 $error = 'Tài khoản đã bị khóa';
             } else {
-                if ($password == $user[0]['password']) {
+                // Kiểm tra xem mật khẩu có được mã hóa hay không
+                if (password_verify($password, $user[0]['password'])) {
+                    // Mật khẩu đã mã hóa
+                    $role = (int)$user[0]['role'];
                     // Lưu thông tin đăng nhập vào Session
                     $_SESSION['user']['id'] = $user[0]['user_id'];
                     $_SESSION['user']['username'] = $user[0]['username'];
@@ -28,14 +35,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signin"])) {
                     $_SESSION['user']['email'] = $user[0]['email'];
                     $_SESSION['user']['phone'] = $user[0]['phone'];
                     $_SESSION['user']['address'] = $user[0]['address'];
-                    $_SESSION['user']['password'] = $user[0]['password'];
+                    $_SESSION['user']['role'] = $role;
 
                     // Xóa session lưu trữ tạm
                     if (isset($_SESSION['user_register'])) unset($_SESSION['user_register']);
 
-                    header("Location: index.php");
+                   if ($role === 0) { 
+                        header("Location: index.php");
+                    } else {
+                        $error = 'Vai trò người dùng không hợp lệ';
+                    }
+                    exit();
                 } else {
-                    $error = 'Sai tên tài khoản hoặc mật khẩu';
+                    // Nếu không mã hóa mật khẩu, so sánh trực tiếp
+                    if ($password === $user[0]['password']) {
+                        // Mật khẩu chưa được mã hóa
+                        $role = (int)$user[0]['role'];
+                        // Lưu thông tin đăng nhập vào Session
+                        $_SESSION['user']['id'] = $user[0]['user_id'];
+                        $_SESSION['user']['username'] = $user[0]['username'];
+                        $_SESSION['user']['full_name'] = $user[0]['full_name'];
+                        $_SESSION['user']['image'] = $user[0]['image'];
+                        $_SESSION['user']['email'] = $user[0]['email'];
+                        $_SESSION['user']['phone'] = $user[0]['phone'];
+                        $_SESSION['user']['address'] = $user[0]['address'];
+                        $_SESSION['user']['role'] = $role;
+
+                        // Xóa session lưu trữ tạm
+                        if (isset($_SESSION['user_register'])) unset($_SESSION['user_register']);
+
+                        // Chuyển hướng dựa trên vai trò
+                        if ($role === 1) { // Nếu role = 1, vào trang admin
+                            header("Location: admin/index.php");
+                        } elseif ($role === 0) { // Nếu role = 0, vào trang khách hàng
+                            header("Location: index.php");
+                        } else {
+                            $error = 'Vai trò người dùng không hợp lệ';
+                        }
+                        exit();
+                    } else {
+                        $error = 'Sai tên tài khoản hoặc mật khẩu';
+                    }
                 }
             }
         } else {
@@ -50,6 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signin"])) {
 
 $html_alert = $BaseModel->alert_error_success($error, '');
 ?>
+
 
 <style>
     label {
