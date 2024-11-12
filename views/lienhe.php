@@ -9,15 +9,15 @@
                             <h5>THÔNG TIN LIÊN LẠC</h5>
                             <ul>
                                 <li>
-                                    <h6><i class="fa fa-map-marker"></i> Địa chỉ</h6>
+                                    <h6></i> Địa chỉ</h6>
                                     <p>41A Đ. Phú Diễn, Phú Diễn, Bắc Từ Liêm, Hà Nội, Việt Nam</p>
                                 </li>
                                 <li>
-                                    <h6><i class="fa fa-phone"></i> Sô điện thoại</h6>
+                                    <h6></i> Sô điện thoại</h6>
                                     <p><span>0123456789</span></p>
                                 </li>
                                 <li>
-                                    <h6><i class="fa fa-headphones"></i> Hỗ trợ</h6>
+                                    <h6></i> Hỗ trợ</h6>
                                     <p>hunre@gmail.com</p>
                                 </li>
                             </ul>
