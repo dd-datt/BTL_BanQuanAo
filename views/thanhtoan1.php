@@ -177,13 +177,7 @@ try {
                                 <li>Tổng <span><?=number_format($totalPayment)?>đ</span></li>
                             </ul>
                         </div>
-                         <!-- <div class="checkout__order__widget">
-                                <label for="paypal">
-                                    Thanh toán khi nhận hàng
-                                    <input type="checkbox" id="paypal">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>  -->
+                    
                         <?php if($count_cart > 0) {?>
                         <div class="checkout__order__widget text-center text-dark mb-2">
                             Thanh toán khi nhận hàng
