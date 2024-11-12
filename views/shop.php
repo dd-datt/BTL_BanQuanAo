@@ -1,32 +1,9 @@
 <?php
-if (isset($_GET['page'])) {
-    $page = $_GET['page'];
-} else {
-    $page = 1;
-}
-
-$list_products = $ProductModel->select_list_products($page, 9);
 $list_catgories = $CategoryModel->select_all_categories();
-
-
 ?>
 
-<!-- Breadcrumb Begin -->
-<div class="breadcrumb-option">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__links">
-                    <a href="index.php"><i class="fa fa-home"></i> Trang chủ</a>
-                    <span>Sản Phẩm</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Breadcrumb End -->
 
-<!-- Shop Section Begin -->
+<!-- Cửa hàng -->
 <section class="shop spad">
     <div class="container">
         <div class="row">
@@ -38,6 +15,8 @@ $list_catgories = $CategoryModel->select_all_categories();
                         </div>
                         <div class="categories__accordion">
                             <div class="accordion" id="accordionExample">
+
+                                <!-- Phần Sidebar hiển thị danh mục -->
                                 <?php foreach ($list_catgories as $value) {
                                     extract($value);
                                 ?>
@@ -45,11 +24,11 @@ $list_catgories = $CategoryModel->select_all_categories();
                                         <div class="card-heading active">
                                             <a href="index.php?url=danh-muc-san-pham&id=<?= $category_id ?>"><?= $name ?></a>
                                         </div>
-
                                     </div>
                                 <?php
                                 }
                                 ?>
+                                <!-- END Phần Sidebar hiển thị danh mục -->
 
 
                             </div>
@@ -60,8 +39,11 @@ $list_catgories = $CategoryModel->select_all_categories();
 
                 </div>
             </div>
+
             <div class="col-lg-9 col-md-9">
                 <div class="row">
+
+                    <!-- Hiển thị danh sách sản phẩm -->
                     <?php foreach ($list_products as $value) {
                         extract($value);
                         $discount_percentage = $ProductModel->discount_percentage($price, $sale_price);
@@ -69,15 +51,19 @@ $list_catgories = $CategoryModel->select_all_categories();
                         <div class="col-lg-4 col-md-6 col-6-rp-mobile">
                             <div class="product__item sale">
                                 <div class="product__item__pic set-bg" data-setbg="upload/<?= $image ?>">
-                                    <!-- <div class="label sale">New</div> -->
+
+                                    <!-- Giảm giá -->
                                     <div class="label_right sale">-<?= $discount_percentage ?></div>
+
+                                    <!-- Nút khi di chuyển chuột vào -->
                                     <ul class="product__hover">
-                                        <li><a href="upload/<?= $image ?>" class="image-popup"><span class="arrow_expand"></span></a></li>
+
+                                        <!-- Nút đi đến trang chi tiết sp -->
                                         <li>
                                             <a href="index.php?url=chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>"><span class="icon_search_alt"></span></a>
                                         </li>
 
-
+                                        <!-- Nút thêm vào giỏ hàng -->
                                         <li>
                                             <?php if (isset($_SESSION['user'])) { ?>
                                                 <form action="index.php?url=gio-hang" method="post">
@@ -104,14 +90,9 @@ $list_catgories = $CategoryModel->select_all_categories();
 
                                 </div>
                                 <div class="product__item__text">
-                                    <h6 class="text-truncate-1"><a href="product-details.html"><?= $name ?></a></h6>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
+                                    <!-- Hiện thị tên sp -->
+                                    <h6 class="text-truncate-1"><a href=""><?= $name ?></a></h6>
+                                    <!-- Hiện thị giá bán -->
                                     <div class="product__price"><?= number_format($sale_price) . "₫" ?> <span><?= number_format($price) . "đ" ?> </span></div>
                                 </div>
                             </div>
@@ -119,60 +100,14 @@ $list_catgories = $CategoryModel->select_all_categories();
                     <?php
                     }
                     ?>
+                    <!-- END Hiển thị danh sách sản phẩm -->
 
-                    <?php
-                    // Phân trang
-                    $qty_product = $ProductModel->count_products();
-                    $totalProducts = count($qty_product); // Tổng số sản phẩm
-                    $productsPerPage = 9; // sản phẩm trên 1 trang
 
-                    // Tính số trang
-                    $totalProducts = intval($totalProducts);
-                    $productsPerPage = intval($productsPerPage);
-                    $numberOfPages = ceil($totalProducts / $productsPerPage);
 
-                    $currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
 
-                    $html_pagination = '';
-                    $pagination_next = '';
-                    $pagination_prev = '';
-                    for ($i = 1; $i <= $numberOfPages; $i++) {
-                        if ($i === $currentPage) {
-                            $active = 'active';
-                        } else {
-                            $active = '';
-                        }
-
-                        $html_pagination .= '
-                                    <a class="' . $active . '" href="index.php?url=cua-hang&page=' . $i . '">' . $i . '</a>
-                                ';
-
-                        //  Next
-                        if ($currentPage < $numberOfPages) {
-                            $pagination_next = '
-                                        <a href="index.php?url=cua-hang&page=' . ($currentPage + 1) . '"><i class="fa fa-angle-right"></i></a>
-                                    ';
-                        }
-
-                        //  Prev
-                        if ($currentPage > 1) {
-                            $pagination_prev = '
-                                        <a href="index.php?url=cua-hang&page=' . ($currentPage - 1) . '"><i class="fa fa-angle-left"></i></a>
-                                    ';
-                        }
-                    }
-                    ?>
-
-                    <div class="col-lg-12 text-center">
-                        <div class="pagination__option">
-                            <?= $pagination_prev ?>
-                            <?= $html_pagination ?>
-                            <?= $pagination_next ?>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Shop Section End -->
+<!-- Trang cửa hàng -->
