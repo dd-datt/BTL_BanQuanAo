@@ -1221,7 +1221,7 @@ ol {
   margin: 0;
 }
 .product__hover li:hover a {
-  background: #0a68ff;
+  background: green;
 }
 .product__hover li:hover a span {
   color: #ffffff;
@@ -1692,7 +1692,7 @@ ol {
 .product__details__price {
   font-size: 30px;
   font-weight: 600;
-  color: #0a68ff;
+  color: green;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -1755,7 +1755,7 @@ ol {
   display: inline-block;
   font-size: 14px;
   color: #ffffff;
-  background: #0a68ff;
+  background: green;
   font-weight: 600;
   text-transform: uppercase;
   padding: 14px 30px 15px;
