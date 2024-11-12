@@ -1,7 +1,7 @@
 <?php
-    $full_name = $_SESSION['user']['full_name'];
-    $url_order = URL_ORDER;
-  $html_email_order = '
+$full_name = $_SESSION['user']['full_name'];
+$url_order = URL_ORDER;
+$html_email_order = '
   
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -461,7 +461,7 @@
                   <tr>
                     <td class="content-cell">
                       <div class="f-fallback">
-                        <h1>Xin chào '.$full_name.'</h1>
+                        <h1>Xin chào ' . $full_name . '</h1>
                         <p>Chúng tôi xác nhận rằng đơn hàng của bạn đã đặt thành công.</strong></p>
                         <p>Để theo dõi trạng thái đơn hàng quý khách vui lòng click vào nút bên dưới.</strong></p>
                         <!-- Action -->
@@ -473,7 +473,7 @@
                               <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
                                 <tr>
                                   <td align="center">
-                                    <a style="color: white;" href="'.$url_order.'" class="f-fallback button button--green" target="_blank">Theo dõi đơn hàng</a>
+                                    <a style="color: white;" href="' . $url_order . '" class="f-fallback button button--green" target="_blank">Theo dõi đơn hàng</a>
                                   </td>
                                 </tr>
                               </table>
@@ -520,5 +520,3 @@
 </html>
   
   ';
-
-?>

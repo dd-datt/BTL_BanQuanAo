@@ -1,7 +1,7 @@
 <!-- Instagram End -->
 <div style="border: 1px solid #0A68FF;"></div>
 <!-- Footer Section Begin -->
-<footer class="footer">
+<footer class="footer" style="background-color: #00704a;">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-7">
@@ -9,34 +9,34 @@
                     <div class="footer__logo">
                         <a href="./index.php"><img src="upload/logo.jpg" alt=""></a>
                     </div>
-                    <p>Chào mừng bạn đến với TAILOR SHOP nơi cung cấp quần áo chất lượng</p>
+                    <p style="color: white; font-weight: 600;">Chào mừng bạn đến với TAILOR SHOP nơi cung cấp quần áo chất lượng</p>
 
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-5">
                 <div class="footer__widget">
-                    <h6>ĐƯỜNG DẪN</h6>
+                    <h6 style="color: white; font-weight: 600;">ĐƯỜNG DẪN</h6>
                     <ul>
-                        <li><a href="#">Về chúng tôi</a></li>
-                        <li><a href="index.php?url=lien-he">Liên hệ</a></li>
-                        <li><a href="index.php?url=doi-tra">Chính sách đổi trả</a></li>
+                        <li><a href="#" style="color: white; font-weight: 600;">Về chúng tôi</a></li>
+                        <li><a href="index.php?url=lien-he" style="color: white; ">Liên hệ</a></li>
+                        <li><a href="index.php?url=doi-tra" style="color: white;">Chính sách đổi trả</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-4">
                 <div class="footer__widget">
-                    <h6>tÀI khoẢN</h6>
+                    <h6 style="color: white; font-weight: 600;">tÀI khoẢN</h6>
                     <ul>
-                        <li><a href="index.php?url=thong-tin-tai-khoan">Tài khoản của tôi</a></li>
-                        <li><a href="index.php?url=don-hang">Theo dõi đơn hàng</a></li>
-                        <li><a href="#">Thủ tục thanh toán</a></li>
+                        <li><a href="index.php?url=thong-tin-tai-khoan" style="color: white; ">Tài khoản của tôi</a></li>
+                        <li><a href="index.php?url=don-hang" style="color: white;">Theo dõi đơn hàng</a></li>
+                        <li><a href="#" style="color: white; font-weight: 600;">Thủ tục thanh toán</a></li>
 
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-8 col-sm-8">
                 <div class="footer__newslatter">
-                    <h6>HỖ TRỢ THANH TOÁN</h6>
+                    <h6 style="color: white; font-weight: 600" ;>HỖ TRỢ THANH TOÁN</h6>
 
                     <div class="footer__payment">
                         <a href="#"><img src="public/img/payment/payment-1.png" alt=""></a>
