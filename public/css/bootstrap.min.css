@@ -2510,8 +2510,8 @@ fieldset:disabled a.btn {
 }
 .btn-success {
   color: #fff;
-  background-color: #338c6e;
-  border-color: #338c6e;
+  background-color: #28a745;
+  border-color: #28a745;
 }
 .btn-success:hover {
   color: #fff;
@@ -9281,7 +9281,7 @@ button.bg-dark:hover {
   color: #fff !important;
 }
 .text-primary {
-  color: #343a40 !important;
+  color: #c82333 !important;
 }
 a.text-primary:focus,
 a.text-primary:hover {

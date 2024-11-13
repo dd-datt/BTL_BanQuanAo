@@ -192,7 +192,7 @@
         </div>
     </div>
 </section>
-<!-- Kết thúc phần hiển thị giỏ hàng -->
+<!-- Shop Cart Section End -->
 <?php }else { ?>
 <div class="row" style="margin-bottom: 400px;">
     <div class="col-lg-12 col-md-12">
@@ -200,6 +200,8 @@
             <div class="row rounded justify-content-center mx-0 pt-5">
                 <div class="col-md-6 text-center">
                     <h4 class="mb-4">Chưa có sản phẩm nào trong giỏ hàng</h4>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="index.php?url=cua-hang">Xem sản phẩm</a>
+                    <a class="btn btn-secondary rounded-pill py-3 px-5" href="index.php">Trang chủ</a>
                 </div>
             </div>
         </div>
@@ -214,6 +216,8 @@
             <div class="row rounded justify-content-center mx-0 pt-5">
                 <div class="col-md-6 text-center">
                     <h4 class="mb-4">Vui lòng đăng nhập để có thể mua hàng</h4>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="index.php?url=dang-nhap">Đăng nhập</a>
+                    <a class="btn btn-secondary rounded-pill py-3 px-5" href="index.php">Trang chủ</a>
                 </div>
             </div>
         </div>
