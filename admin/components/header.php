@@ -57,9 +57,15 @@
                     </div>
 
 
-
-                    <a href="index.php?quanli=danh-sach-khach-hang" class="nav-item nav-link"><i
-                            class="fas fa-users me-2"></i>Thành viên</a>
+                    <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                    class="fas fa-box me-2"></i> Thành viên </a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="index.php?quanli=danh-sach-nhan-vien" class="dropdown-item">Quản lý nhân viên</a>
+                            <a href="index.php?quanli=danh-sach-khach-hang 
+                                " class="dropdown-item">Quản lý khách hàng</a> 
+                            </div>
+                    </div>       
 
                     <a href="index.php?quanli=binh-luan" class="nav-item nav-link"><i
                             class="fas fa-comment me-2"></i>Bình luận</a>

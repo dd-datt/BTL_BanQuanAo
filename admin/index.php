@@ -95,15 +95,31 @@
                 break;
                 
             
-            // Khách hàng & Tài khoản
+            // Quản lí nhân viên và khách hàng
+            //Nhân viên
+            case 'danh-sach-nhan-vien':
+
+                require_once "thanh-vien/list_nv.php";         
+                break; 
+            case 'them-tai-khoan-nv':
+                require_once "thanh-vien/add_nv.php";         
+                break;
+            case 'sua-tai-khoan-nv':
+                require_once "thanh-vien/edit_nv.php";         
+                break;
+
+
+            //Khách hàng
             case 'danh-sach-khach-hang':
 
-                require_once "khach-hang/list.php";         
+                require_once "thanh-vien/list_kh.php";         
                 break; 
-            case 'them-tai-khoan':
-
-                require_once "khach-hang/add.php";         
-                break;  
+            case 'them-tai-khoan-kh':
+                require_once "thanh-vien/add_kh.php";         
+                break;
+            case 'sua-tai-khoan-kh':
+                require_once "thanh-vien/edit_kh.php";         
+                break;      
             
             // Bình luận  
             case 'binh-luan':

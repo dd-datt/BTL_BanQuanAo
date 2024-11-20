@@ -50,21 +50,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             if ($user[0]['active'] != 1) {
                 $error = 'Tài khoản đã bị khóa';
             } else {
-                // Kiểm tra mật khẩu trực tiếp
-                if ($password == $user[0]['password']) {
-                    // Lưu thông tin đăng nhập vào Session
-                    $_SESSION['user_admin']['id'] = $user[0]['user_id'];
-                    $_SESSION['user_admin']['username'] = $user[0]['username'];
-                    $_SESSION['user_admin']['full_name'] = $user[0]['full_name'];
-                    $_SESSION['user_admin']['image'] = $user[0]['image'];
-                    $_SESSION['user_admin']['email'] = $user[0]['email'];
-                    $_SESSION['user_admin']['phone'] = $user[0]['phone'];
-                    $_SESSION['user_admin']['address'] = $user[0]['address'];
+                // Kiểm tra quyền truy cập (0: admin, 1: nhân viên)
+                if ($user[0]['role'] == 0 || $user[0]['role'] == 1) {
+                    // Kiểm tra mật khẩu trực tiếp
+                    if ($password == $user[0]['password']) {
+                        // Lưu thông tin đăng nhập vào Session
+                        $_SESSION['user_admin']['id'] = $user[0]['user_id'];
+                        $_SESSION['user_admin']['username'] = $user[0]['username'];
+                        $_SESSION['user_admin']['full_name'] = $user[0]['full_name'];
+                        $_SESSION['user_admin']['image'] = $user[0]['image'];
+                        $_SESSION['user_admin']['email'] = $user[0]['email'];
+                        $_SESSION['user_admin']['phone'] = $user[0]['phone'];
+                        $_SESSION['user_admin']['address'] = $user[0]['address'];
 
-                    header("Location: index.php");
-                    exit();
+                        header("Location: index.php");
+                        exit();
+                    } else {
+                        $error = 'Sai tên tài khoản hoặc mật khẩu';
+                    }
                 } else {
-                    $error = 'Sai tên tài khoản hoặc mật khẩu';
+                    $error = 'Bạn không có quyền truy cập';
                 }
             }
         }
