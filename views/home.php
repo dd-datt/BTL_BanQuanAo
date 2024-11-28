@@ -7,18 +7,22 @@ $product_limit_3 = $ProductModel->select_products_limit(3);
 $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
 ?>
 
-<!-- Banner Section Begin -->
+<!-- Phần Banner  -->
 <section class="container my-3">
     <div class="row justify-content-center">
         <div class="col-lg-8 col-sm-12 d-flex justify-content-center">
             <div id="header-carousel" class="carousel slide" data-ride="carousel" style="width: 100%; max-width: 1000px;">
                 <div class="carousel-inner" style="border-radius: 10px;">
+
+                    <!-- ảnh banner -->
                     <div class="carousel-item active">
-                        <img class="img-fluid" src="upload/banner_quanao_main4.png" alt="Image">
+                        <img class="img-fluid" src="upload/banner_100.jpg" alt="Image">
                     </div>
                     <div class="carousel-item">
-                        <img class="img-fluid" src="upload/banner_quanao_main5.png" alt="Image">
+                        <img class="img-fluid" src="upload/banner_100.jpg" alt="Image">
                     </div>
+
+                    <!-- nút tiến lên, quay lại -->
                 </div>
                 <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
                     <div class="btn btn-dark" style="width: 45px; height: 45px;">
@@ -30,11 +34,13 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                         <span class="carousel-control-next-icon mb-n2"></span>
                     </div>
                 </a>
+
+
             </div>
         </div>
     </div>
 </section>
-<!-- Banner Section End -->
+<!-- END banner -->
 
 
 <!-- Sản phẩm Begin -->
@@ -193,7 +199,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                                 <h6>
                                     <a href="chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>" class="text-dark"><?= $name ?></a>
                                 </h6>
-                                
+
                                 <div class="product__price"><?= number_format($sale_price) ?>₫</div>
                             </div>
                         </div>
@@ -220,7 +226,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                                 <h6>
                                     <a href="chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>" class="text-dark"><?= $name ?></a>
                                 </h6>
-                               
+
                                 <div class="product__price"><?= number_format($sale_price) ?>₫</div>
                             </div>
                         </div>
@@ -247,7 +253,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
                                 <h6>
                                     <a href="chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>" class="text-dark"><?= $name ?></a>
                                 </h6>
-                                
+
                                 <div class="product__price"><?= number_format($sale_price) ?>₫</div>
                             </div>
                         </div>
@@ -263,7 +269,7 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
 
 
 
-<!-- Services Section Begin -->
+<!-- Dich vụ -->
 <section class="services spad">
     <div class="container">
         <div class="row">
@@ -298,4 +304,4 @@ $product_order_by = $ProductModel->select_products_order_by(3, 'ASC');
         </div>
     </div>
 </section>
-<!-- Services Section End -->
+<!-- Dịch vụ -->

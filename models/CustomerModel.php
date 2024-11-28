@@ -7,6 +7,14 @@
             return pdo_query($sql);
         }
 
+    // admin
+    public function select_admin()
+    {
+        $sql = "SELECT username, full_name, email, phone FROM users WHERE role = 1";
+
+        return pdo_query($sql);
+    }
+
         public function select_email_in_users($email) {
             $sql = "SELECT * FROM users WHERE email = ?";
 
