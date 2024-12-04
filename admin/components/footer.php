@@ -36,7 +36,7 @@
 
 <!--  CKEditor CDN -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-<script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script> -->
 
 <script>
     if (document.getElementById('categories-list')) {
@@ -99,24 +99,24 @@
         });
     }
 
-    ClassicEditor
-        .create(document.querySelector('#short_description'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    // ClassicEditor
+    //     .create(document.querySelector('#short_description'))
+    //     .then(editor => {
+    //         console.log(editor);
+    //     })
+    //     .catch(error => {
+    //         console.error(error);
+    //     });
 
     // Tạo trình soạn thảo cho #product_details
-    ClassicEditor
-        .create(document.querySelector('#product_details'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    // ClassicEditor
+    //     .create(document.querySelector('#product_details'))
+    //     .then(editor => {
+    //         console.log(editor);
+    //     })
+    //     .catch(error => {
+    //         console.error(error);
+    //     });
 </script>
 
 <script>
