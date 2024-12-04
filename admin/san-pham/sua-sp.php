@@ -132,7 +132,7 @@ $html_alert = $BaseModel->alert_error_success('', $success);
                 <!-- Mô tả ngắn -->
                 <label for="text-dark">Mô tả ngắn</label>
                 <div class="form-floating mb-3">
-                    <textarea name="short_description" class="form-control" placeholder="Mô tả ngắn" id="short_description"><?= $short_description ?></textarea>
+                    <textarea name="short_description" class="form-control" placeholder="Mô tả ngắn" id="short_description" style="height: 200px;"><?= $short_description ?></textarea>
                 </div>
 
                 <!-- Chi tiết sản phẩm -->
