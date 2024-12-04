@@ -32,13 +32,13 @@ if (!isset($_GET['quanli'])) {
     switch ($_GET['quanli']) {
             // **Quản lý sản phẩm**
         case 'danh-sach-san-pham':
-            require_once "san-pham/list.php"; // Hiển thị danh sách sản phẩm
+            require_once "san-pham/danh-sach-sp.php"; // Hiển thị danh sách sản phẩm
             break;
         case 'them-san-pham':
-            require_once "san-pham/add.php"; // Thêm sản phẩm mới
+            require_once "san-pham/them-sp.php"; // Thêm sản phẩm mới
             break;
         case 'cap-nhat-san-pham':
-            require_once "san-pham/edit.php"; // Cập nhật thông tin sản phẩm
+            require_once "san-pham/sua-sp.php"; // Cập nhật thông tin sản phẩm
             break;
         case 'thung-rac-san-pham':
             require_once "san-pham/thung-rac.php"; // Quản lý sản phẩm trong thùng rác
