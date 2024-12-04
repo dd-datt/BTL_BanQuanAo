@@ -1,26 +1,18 @@
 <?php
+// Khởi tạo biến lưu danh sách sản phẩm
 $list_products = '';
-// Sản phẩm theo tên
+
+// Tìm kiếm sản phẩm theo tên
 if (isset($_GET['query']) && !empty($_GET['query'])) {
-    $query = trim($_GET['query']);
+    $query = trim($_GET['query']); // Loại bỏ khoảng trắng 2 đầu
     $list_products = $ProductModel->search_products($query);
 }
 
-// Sản phẩm theo giá
-if (isset($_GET['from_price']) && isset($_GET['to_price'])) {
-    $from_price = $_GET['from_price'];
-    $to_price = $_GET['to_price'];
-
-    $list_products = $ProductModel->search_products_by_price($from_price, $to_price);
-}
-
-// Giá cao và thấp nhất của sản phẩm
-$min_max_price = $ProductModel->get_min_max_prices();
-
+// Lấy tất cả danh mục sản phẩm
 $list_catgories = $CategoryModel->select_all_categories();
 ?>
 
-<!-- Breadcrumb Begin -->
+<!-- Phần breadcrumb -->
 <div class="breadcrumb-option">
     <div class="container">
         <div class="row">
@@ -32,11 +24,9 @@ $list_catgories = $CategoryModel->select_all_categories();
                     </a>
                     <span>
                         <?php
+                        // Hiển thị từ khóa tìm kiếm 
                         if (isset($_GET['query'])) {
                             echo $_GET['query'];
-                        }
-                        if (isset($_GET['from_price']) && isset($_GET['to_price'])) {
-                            echo "Giá từ " . $_GET['from_price'] . " đến " . $_GET['to_price'];
                         }
 
                         ?>
@@ -46,12 +36,12 @@ $list_catgories = $CategoryModel->select_all_categories();
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
 
-<!-- Shop Section Begin -->
+<!-- Phần nội dung chính -->
 <section class="shop spad">
     <div class="container">
         <div class="row">
+            <!-- Sidebar bên trái -->
             <div class="col-lg-3 col-md-3">
                 <div class="shop__sidebar">
                     <div class="sidebar__categories">
@@ -69,39 +59,39 @@ $list_catgories = $CategoryModel->select_all_categories();
                                                 <?= $name ?>
                                             </a>
                                         </div>
-
                                     </div>
                                 <?php
                                 }
                                 ?>
-
-
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
+
+            <!-- Phần hiển thị sản phẩm -->
             <?php if (is_array($list_products) && count($list_products) > 0) { ?>
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
                         <?php foreach ($list_products as $value) {
                             extract($value);
+                            // Tính phần trăm giảm giá
                             $discount_percentage = $ProductModel->discount_percentage($price, $sale_price);
                         ?>
                             <div class="col-lg-4 col-md-6 col-6-rp-mobile">
                                 <div class="product__item sale">
+                                    <!-- Ảnh sản phẩm -->
                                     <div class="product__item__pic set-bg" data-setbg="upload/<?= $image ?>">
-                                        <!-- <div class="label sale">New</div> -->
                                         <div class="label_right sale">-<?= $discount_percentage ?></div>
+
+                                        <!-- Các nút tương tác -->
                                         <ul class="product__hover">
-                                            <li><a href="upload/<?= $image ?>" class="image-popup"><span class="arrow_expand"></span></a></li>
+                                            <!-- Nút xem chi tiết -->
                                             <li>
                                                 <a href="index.php?url=chitietsanpham&id_sp=<?= $product_id ?>&id_dm=<?= $category_id ?>"><span class="icon_search_alt"></span></a>
                                             </li>
-
-
+                                            
+                                            <!-- Nút thêm vào giỏ hàng -->
                                             <li>
                                                 <?php if (isset($_SESSION['user'])) { ?>
                                                     <form action="index.php?url=gio-hang" method="post">
@@ -123,19 +113,13 @@ $list_catgories = $CategoryModel->select_all_categories();
                                                     </button>
                                                 <?php } ?>
                                             </li>
-
                                         </ul>
-
                                     </div>
+
+                                    <!-- Thông tin sản phẩm -->
                                     <div class="product__item__text">
                                         <h6 class="text-truncate-1"><a href="product-details.html"><?= $name ?></a></h6>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
+
                                         <div class="product__price"><?= number_format($sale_price) . "₫" ?> <span><?= number_format($price) . "đ" ?> </span></div>
                                     </div>
                                 </div>
@@ -143,11 +127,10 @@ $list_catgories = $CategoryModel->select_all_categories();
                         <?php
                         }
                         ?>
-
-
                     </div>
                 </div>
             <?php } else { ?>
+                <!-- Hiển thị khi không tìm thấy sản phẩm -->
                 <div class="col-lg-9 col-md-9">
                     <div class="container-fluid mt-5">
                         <div class="row rounded justify-content-center mx-0 pt-5">
@@ -167,4 +150,3 @@ $list_catgories = $CategoryModel->select_all_categories();
         </div>
     </div>
 </section>
-<!-- Shop Section End -->
