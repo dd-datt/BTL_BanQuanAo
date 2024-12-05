@@ -95,7 +95,7 @@
     <div class="container">
         <form action="" method="post">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-8">
                     <!-- <form action="" method="post"> -->
                     <div class="shop__cart__table">
                         <?=$alert = $BaseModel->alert_error_success($error, $success)?>
