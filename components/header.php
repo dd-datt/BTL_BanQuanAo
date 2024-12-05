@@ -53,7 +53,7 @@
 
     <!-- Header Section Begin -->
     <header class="header" style="background-color: #00704a;">
-        <div class="container" >
+        <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-2">
                     <div class="header__logo">
@@ -78,6 +78,8 @@
                                     <li><a href="index.php?url=don-hang">Đơn hàng</a></li>
                                 </ul>
                             </li>
+
+
 
 
 
@@ -106,18 +108,7 @@
                         }
                         ?>
 
-                        <?php if (isset($_SESSION['user'])) { ?>
-                            <ul class="header__right__widget">
-                                <li><span class="icon_search search-switch"></span></li>
-
-                            </ul>
-                        <?php } else { ?>
-
-                            <ul class="header__right__widget">
-                                <li><span class="icon_search search-switch" style="color: white;"></span></li>
-
-                            </ul>
-                        <?php } ?>
+                        <a href="index.php?url=cua-hang" class="icon_search" style="color: white;"></a>
                     </div>
                 </div>
             </div>
@@ -127,4 +118,3 @@
         </div>
     </header>
     <!-- Header Section End -->
-    
