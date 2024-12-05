@@ -22,23 +22,23 @@ require_once "components/header.php";
 
 
 if (!isset($_GET['url'])) {
-    require_once "views/home.php";
+    require_once "views/trang-chu.php";
 } else {
     switch ($_GET['url']) {
             // Trang chủ
         case 'trang-chu':
-            require_once "views/home.php";
+            require_once "views/trang-chu.php";
             break;
         case 'cua-hang':
-            require_once "views/shop.php";
+            require_once "views/cua-hang.php";
             break;
             // Chi tiết sản phẩm
         case 'chitietsanpham':
-            require_once "views/productdetail.php";
+            require_once "views/chi-tiet-sp.php";
             break;
             // Danh mục sản phẩm
         case 'danh-muc-san-pham':
-            require_once "views/shop-by-category.php";
+            require_once "views/danh-muc.php";
             break;
             // Liên hệ
         case 'lien-he':
