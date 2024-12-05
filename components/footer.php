@@ -9,7 +9,7 @@
                     <div class="footer__logo">
                         <a href="./index.php"><img src="upload/logo.jpg" alt=""></a>
                     </div>
-                    <p style="color: white; font-weight: 600;">Chào mừng bạn đến với TAILOR SHOP nơi cung cấp quần áo chất lượng</p>
+                    <p style="color: white; font-weight: 600;">Chào mừng bạn đến với cửa hàng nơi cung cấp quần áo chất lượng</p>
 
                 </div>
             </div>
