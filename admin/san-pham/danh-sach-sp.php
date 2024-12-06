@@ -8,7 +8,7 @@ if (isset($_POST['search'])) {
     $cate_id = 0; // Mặc định là 0 (tất cả danh mục)
 }
 
-// // Kiểm tra trang hiện tại (nếu không có thì mặc định là trang 1)
+// Kiểm tra trang hiện tại (nếu không có thì mặc định là trang 1)
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
@@ -20,7 +20,7 @@ $list_categories = $CategoryModel->select_all_categories(); // Lấy tất cả 
 $list_products = $ProductModel->select_list_products($keyword, $cate_id, $page, 10); // Lấy danh sách sản phẩm theo điều kiện tìm kiếm
 $count_recycle = $ProductModel->select_recycle_products(); // Lấy số lượng sản phẩm trong thùng rác
 
-// // Phân trang
+// Phân trang
 $all_products = $ProductModel->select_products(); // Lấy tất cả sản phẩm
 $totalProducts = count($all_products); // Tổng số sản phẩm
 $productsPerPage = 10; // Số sản phẩm mỗi trang
@@ -109,8 +109,8 @@ if ($currentPage > 1) {
             <table class="table text-start align-middle table-bordered table-hover mb-0">
                 <thead>
                     <tr class="text-dark">
-                        <th scope="col">#</th>
-                        <th scope="col">Tên</th>
+                        <th scope="col">STT</th>
+                        <th scope="col">Tên sản phẩm</th>
                         <th scope="col">Ảnh</th>
                         <th scope="col">Giá thường</th>
                         <th scope="col">Giá khuyến mãi</th>
