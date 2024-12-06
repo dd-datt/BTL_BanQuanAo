@@ -9,7 +9,7 @@
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h6 class="mb-0">Danh sách tài khoản nhân viên</h6>
-            <a href="them-tai-khoan" class="btn btn-custom"><i class="fa fa-plus"></i> Thêm tài khoản</a>
+            <a href="index.php?quanli=them-tai-khoan-nv" class="btn btn-custom"><i class="fa fa-plus"></i> Thêm tài khoản</a>
 
         </div>
 
