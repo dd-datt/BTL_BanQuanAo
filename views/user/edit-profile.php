@@ -50,9 +50,11 @@
         }
 
         if(empty(array_filter($error))) {
+            // Đặt đường dẫn đến thư mục upload
             $target_dir = "upload/";
+            // Lấy tên file
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    
+              // Di chuyển file đến thư mục upload
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
             }
     

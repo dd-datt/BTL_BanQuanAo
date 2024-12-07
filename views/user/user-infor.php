@@ -31,7 +31,7 @@
                                     </a>
                                     <a href="index.php?url=don-hang" class="list-group-item list-group-item-action">Đơn mua</a>
                                     <a href="index.php?url=doi-mat-khau" class="list-group-item list-group-item-action">Đổi mật khẩu</a>
-                                    <?php if (isset($_SESSION['user']) && ($_SESSION['user']['role'] === 0 || $_SESSION['user']['role'] === 1)): ?>
+                                    <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 1): ?>
                                         <a href="admin/index.php" class="list-group-item list-group-item-action">Quay lại trang admin</a>
                                     <?php endif; ?>
                                     <a href="index.php?url=dang-xuat" class="list-group-item list-group-item-action">Đăng xuất</a>

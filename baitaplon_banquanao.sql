@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 --
 -- Cấu trúc bảng cho bảng `address`
 --
+CREATE DATABASE baitaplon_banquanao;
+USE baitaplon_banquanao;
+
 
 CREATE TABLE `address` (
   `id` int(11) NOT NULL,

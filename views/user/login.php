@@ -40,7 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signin"])) {
                     // Xóa session lưu trữ tạm
                     if (isset($_SESSION['user_register'])) unset($_SESSION['user_register']);
 
-                   if ($role === 0) { 
+                    // Chuyển hướng dựa trên vai trò
+                    if ($role === 1) { // Nếu role = 1, vào trang admin
+                        header("Location: admin/index.php");
+                    } elseif ($role === 0) { // Nếu role = 0, vào trang khách hàng
                         header("Location: index.php");
                     } else {
                         $error = 'Vai trò người dùng không hợp lệ';

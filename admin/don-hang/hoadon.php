@@ -163,7 +163,7 @@ $date_formated = date('d/m/Y H:i:s', strtotime($order_date)); // Định dạng 
         <!-- Thông tin người gửi (Shopee) -->
         <div class="section-title">Thông Tin Người Gửi</div>
         <div class="info-section">
-            <p><strong>Tên:</strong> TAILOR SHOP</p>
+            <p><strong>Tên:</strong> FASHION Shop</p>
             <p><strong>Địa chỉ:</strong>41A, Đường Phú Diễn , Quận Bắc từ Liêm, Thành phố Hà Nội</p>
             <p><strong>SĐT:</strong> 84982811660</p>
         </div>
@@ -208,7 +208,7 @@ $date_formated = date('d/m/Y H:i:s', strtotime($order_date)); // Định dạng 
 
         <!-- Mã QR -->
         <div class="qr-code">
-            <img src="qrcode.png" alt="QR Code" width="80">
+            <img src="../upload/qrcode.png" alt="QR Code" width="80">
         </div>
 
         <!-- Tổng tiền -->
