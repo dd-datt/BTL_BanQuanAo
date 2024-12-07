@@ -4,10 +4,10 @@ ob_start();
 session_start();
 
 // Kiểm tra xem admin đã đăng nhập chưa, nếu chưa thì chuyển hướng tới trang đăng nhập
-if (!isset($_SESSION['user_admin'])) {
-    header("Location: login.php");
-    exit();
-}
+// if (!isset($_SESSION['user_admin'])) {
+//     header("Location: login.php");
+//     exit();
+// }
 
 // Nạp các file model cần thiết
 require_once "models_admin/pdo_library.php";
