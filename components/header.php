@@ -31,9 +31,9 @@
 
         <?php if (isset($_SESSION['user'])) { ?>
             <div class="offcanvas__auth acount">
-                <a href="index.php?url=thong-tin-tai-khoan">
+                <a href="index.php?url=thong-tin-tai-khoan" style="color: white;">
                     <img src="upload/<?= $_SESSION['user']['image'] ? $_SESSION['user']['image'] : 'upload/user-default.png' ?>" alt="">
-                    <?= $_SESSION['user']['username'] ?>
+                    <?= $_SESSION['user']['username']?>
                 </a>
             </div>
         <?php
@@ -92,7 +92,7 @@
 
                         <?php if (isset($_SESSION['user'])) { ?>
                             <div class="header__right__auth acount">
-                                <a href="index.php?url=thong-tin-tai-khoan">
+                                <a href="index.php?url=thong-tin-tai-khoan" style="color: white;">
                                     <img src="upload/<?= $_SESSION['user']['image'] ?>" alt=""><?= $_SESSION['user']['username'] ?>
                                 </a>
 

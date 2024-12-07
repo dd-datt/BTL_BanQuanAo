@@ -44,6 +44,9 @@ if (!isset($_GET['url'])) {
         case 'lien-he':
             require_once "views/contact.php";
             break;
+        case 'doi-tra':
+            require_once "views/doi-tra.php";
+            break;
             // Giỏ hàng
         case 'gio-hang':
             require_once "views/giohang.php";
