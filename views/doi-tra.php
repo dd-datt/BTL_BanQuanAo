@@ -88,7 +88,7 @@ p {
             <h2>3. Phương thức đổi sản phẩm</h2>
             <ul>
                 <li><strong>Hàng mua trực tiếp:</strong> Đổi trả trực tiếp tại cửa hàng mua hàng.</li>
-                <li><strong>Hàng mua online:</strong> Liên hệ FASHION STORE để được hướng dẫn.</li>
+                <li><strong>Hàng mua online:</strong> Liên hệ FASHION Shop để được hướng dẫn.</li>
             </ul>
         </div>
 
@@ -96,7 +96,7 @@ p {
             <h2>4. Chi phí đổi hàng</h2>
             <ul>
                 <li>Miễn phí đổi hàng trong trường hợp lỗi từ nhà sản xuất, giao nhầm hàng hoặc bị hư hỏng trong quá trình vận chuyển.</li>
-                <li>Trường hợp không vừa size hoặc khách không ưng ý, khách hàng vui lòng trả phí ship hoàn hàng về FASHION STORE.</li>
+                <li>Trường hợp không vừa size hoặc khách không ưng ý, khách hàng vui lòng trả phí ship hoàn hàng về FASHION Shop.</li>
             </ul>
         </div>
     </div>
