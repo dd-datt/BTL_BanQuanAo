@@ -8,7 +8,6 @@ require_once "models/BaseModel.php";
 require_once "models/ProductModel.php";
 require_once "models/CategoryModel.php";
 require_once "models/CustomerModel.php";
-require_once "models/CommentModel.php";
 require_once "models/CartModel.php";
 require_once "models/OrderModel.php";
 require_once "models/PostModel.php";
